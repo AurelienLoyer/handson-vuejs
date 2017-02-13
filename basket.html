@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zenika Ecommerce</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Zenika Ecommerce</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/basket.html">Accéder à votre panier (3 articles - 10,10€)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Basket</div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    La Corbeau <span class="label label-primary pull-right">3,10 €</span>
+                </li>
+                <li class="list-group-item">
+                    Jack Hammer <span class="label label-primary pull-right">3,50 €</span>
+                </li>
+                <li class="list-group-item">
+                    Rince Cochon <span class="label label-primary pull-right">3,50 €</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Order</div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group has-error">
+                        <label class="control-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-control" name="name" required>
+                    </div>
+
+                    <div class="form-group has-error">
+                        <label class="control-label" for="address">Address</label>
+                        <textarea id="address" class="form-control" name="address" required ></textarea>
+                    </div>
+
+                    <div class="form-group has-error">
+                        <label class="control-label" for="creditCard">Credit card number</label>
+                        <input id="creditCard" class="form-control" name="creditCard" pattern="^[0-9]{3}-[0-9]{3}$">
+                    </div>
+
+                    <div class="col-xs-12">
+                        <button type="submit" class="btn btn-success pull-right" [disabled]="!customerForm.valid">
+                    Validate
+                </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Zenika ECommerce</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+</body>
+
+</html>
