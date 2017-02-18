@@ -2,10 +2,12 @@
 
 Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la librairie VueJS. 
 
-## Prérequis 
+## Prérequis
+
+Pour faire ce codelab, vous avez besoin des outils suivants :  
 
 * GIT
-* NodeJS
+* NodeJS 7.x
 
 ## Step 0
 
