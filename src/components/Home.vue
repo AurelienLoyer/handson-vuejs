@@ -1,19 +1,7 @@
 <template>
-  <div class="">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Zenika Ecommerce</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/basket.html">Accéder à votre panier (3 articles - 10,10€)</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <div>
+
+    <v-menu></v-menu>
 
     <div class="container">
 
@@ -24,91 +12,19 @@
           <div class="row">
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <div class="thumbnail">
-                <img src="/static/images/queuedecharrue.jpg" alt="">
-                <div class="caption">
-                  <h4 class="pull-right">3,70 €</h4>
-                  <h4><a href="#">Queue de Charrue</a>
-                  </h4>
-                  <p>La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...</p>
-                </div>
-                <div class="ratings">
-                  <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
-                  <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                  </p>
-                </div>
-              </div>
+              <v-produit></v-produit>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <div class="thumbnail">
-                <img src="/static/images/corbeau.jpg" alt="">
-                <div class="caption">
-                  <h4 class="pull-right">3,10 €</h4>
-                  <h4><a href="#">La Corbeau</a>
-                  </h4>
-                  <p>La bière du Corbeau est une bière blonde trés gazeuse et avec une belle mousse persistante.Le nez propose des arômes de citron, de végétal et de caramel.la ...</p>
-                </div>
-                <div class="ratings">
-                  <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
-                  <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                  </p>
-                </div>
-              </div>
+              <v-produit></v-produit>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <div class="thumbnail">
-                <img src="/static/images/jeackhammer.jpg" alt="">
-                <div class="caption">
-                  <h4 class="pull-right">3,5 €</h4>
-                  <h4><a href="#">Jack Hammer</a>
-                  </h4>
-                  <p>Selon la rumeur, la Jack Hammer serait une bière tellement houblonnée que l'on y retrouverait plus d'amertume que le palais humain ne puisse détecter.</p>
-                </div>
-                <div class="ratings">
-                  <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
-                  <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                  </p>
-                </div>
-              </div>
+              <v-produit></v-produit>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <div class="thumbnail">
-                <img src="/static/images/rincecochon.jpg" alt="">
-                <div class="caption">
-                  <h4 class="pull-right">3,50 €</h4>
-                  <h4><a href="#">Rince Cochon</a>
-                  </h4>
-                  <p>Autrefois brassée à Annoeullin par la SBA sous le nom de "Le Rince Cochon", cette bière est aujourd'hui brassée par la brasserie Haacht, en Belgique, qui ...</p>
-                </div>
-                <div class="ratings">
-                  <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
-                  <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star-empty"></span>
-                  </p>
-                </div>
-              </div>
+              <v-produit></v-produit>
             </div>
           </div>
 
@@ -120,17 +36,9 @@
     <!-- /.container -->
 
     <div class="container">
-
       <hr>
-
       <!-- Footer -->
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Zenika ECommerce</p>
-          </div>
-        </div>
-      </footer>
+      <v-footer></v-footer>
 
     </div>
     <!-- /.container -->
@@ -140,11 +48,22 @@
 </template>
 
 <script>
+import Produit from './Produit'
+import Menu from './Menu'
+import Footer from './Footer'
+
 export default {
   name: 'home',
+  components: {
+    'v-menu': Menu,
+    'v-footer': Footer,
+    'v-produit': Produit
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      produits: [
+
+      ]
     }
   }
 }
