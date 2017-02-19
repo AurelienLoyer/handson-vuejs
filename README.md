@@ -1,27 +1,30 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Shop Homepage](http://startbootstrap.com/template-overviews/shop-homepage/)
+# devoxx-vuejs
 
-[Shop Homepage](http://startbootstrap.com/template-overviews/shop-homepage/) is a basic HTML online store homepage template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+> A Vue.js project
 
-## Getting Started
+## Build Setup
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/shop-homepage/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-shop-homepage.git`
-* Fork the repo
+``` bash
+# install dependencies
+npm install
 
-## Bugs and Issues
+# serve with hot reload at localhost:8080
+npm run dev
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-shop-homepage/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/shop-homepage/).
+# build for production with minification
+npm run build
 
-## Creator
+# build for production and view the bundle analyzer report
+npm run build --report
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+# run unit tests
+npm run unit
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+# run e2e tests
+npm run e2e
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+# run all tests
+npm test
+```
 
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/gh-pages/LICENSE) license.
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

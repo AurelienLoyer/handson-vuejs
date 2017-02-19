@@ -2,3 +2,11 @@ node_modules
 bower_components
 dist
 bespoke-theme-*
+
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
