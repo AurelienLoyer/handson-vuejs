@@ -1,11 +1,11 @@
 <template lang="html">
   <div class="thumbnail">
-    <img src="/static/images/queuedecharrue.jpg" alt="">
+    <img v-bind:src="item.image" alt="">
     <div class="caption">
-      <h4 class="pull-right">3,70 €</h4>
-      <h4><a href="#">Queue de Charrue</a>
+      <h4 class="pull-right">{{item.price}} €</h4>
+      <h4><a href="#">{{item.name}}</a>
       </h4>
-      <p>La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...</p>
+      <p>{{item.description}}</p>
     </div>
     <div class="ratings">
       <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
@@ -22,7 +22,8 @@
 
 <script>
 export default {
-  name: 'produit'
+  name: 'produit',
+  props: ['item']
 }
 </script>
 
