@@ -49,6 +49,27 @@ npm run dev
 ```
 ## PW2 - Les Composants
 
+Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour affiche le **header** et le second le bloc spécifique à une bière. 
+
+* Définissez une classe `Beer` qui possèdera les propriétés suivantes : 
+    * label
+    * description
+    * photo
+    * price
+
+* Créez un nouveau composant `menu.vue` dans lequel vous allez implémenter le menu principal de l'application. Ce composant possèdera un paramètre, un tableau de produit (le panier de l'utilisateur). Ce tableau sera utilisé pour calculer le prix total du panier. 
+
+* Remplacez dans le composant principal le menu initial par le composant que vous venez de créer.
+
+* Dans le composant principal, instanciez un nouveau tableau de Beer.
+
+* Nous allons à présent créer un composant `Beer.vue` qui sera en charge d'afficher le détail d'un élément de notre tableau précédement créé. Voici les prérequis pour ce composant : 
+    * Il utilisera le template pour l'instant présent dans le composant principal
+    * Il possèdera un paramètre, correspondant à l'élément à afficher
+    * Il émettra un événement lorsque nous cliquons sur le bouton
+
+* Lorsque le composant principal reçoit cet événement, il devra mettre à jour le panier de l'utilisateur (utilisé précédemment lors de l'utilisation du composant `menu.vue`).
+
 ## PW3 - Les Directives
 
 ## PW4 - Les Pipes
