@@ -20,7 +20,7 @@ Pour récupérer ce template statique, veuillez exécuter la commande suivante :
 git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
 ```
 
-## PW1
+## PW1 - Getting Started
 
 Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposision dans une application **VueJS**. 
 Pour cela nous allons utiliser l'utilitaire **vue-cli**. 
@@ -47,3 +47,16 @@ vue init webpack devoxx
 ```shell
 npm run dev
 ```
+## PW2 - Les Composants
+
+## PW3 - Les Directives
+
+## PW4 - Les Pipes
+
+## PW5 - Les Ressources
+
+## PW6 - Les Formulaires
+
+## PW7 - Le Routeur
+
+## PW8 - Les Tests
