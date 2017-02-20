@@ -1,17 +1,21 @@
-# Devoxx VueJS
-> A [Bespoke.js](http://markdalgleish.com/projects/bespoke.js) presentation, built with [generator-bespoke](https://github.com/markdalgleish/generator-bespoke)
+# Exercice
 
-## View slides locally
+Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la librairie VueJS. 
 
-First, ensure you have the following installed:
+## Prérequis
 
-1. [Node.js](http://nodejs.org)
-2. [Bower](http://bower.io): `$ npm install -g bower`
-3. [Gulp](http://gulpjs.com): `$ npm install -g gulp`
+Pour faire ce codelab, vous avez besoin des outils suivants :  
 
-Then, install dependencies and run the preview server:
+* GIT
+* NodeJS 7.x
 
-```bash
-$ npm install && bower install
-$ gulp serve
+## Step 0
+
+Tous les exercices qui vont suivre, se baseront sur deux pages statiques que nous avons développer. 
+Le but sera de mettre à page cette page pour l'intégrer dans une application VueJS. 
+
+Pour récupérer ce template statique, veuillez exécuter la commande suivante : 
+
+```shell
+git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
 ```
