@@ -8,6 +8,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 * GIT
 * NodeJS 7.x
+* Un IDE
 
 ## PW0
 
@@ -71,6 +72,24 @@ Nous allons à présent créer nos premiers composants. Le premier sera utilisé
 * Lorsque le composant principal reçoit cet événement, il devra mettre à jour le panier de l'utilisateur (utilisé précédemment lors de l'utilisation du composant `menu.vue`).
 
 ## PW3 - Les Directives
+
+Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour dynamiser notre page.
+
+* Grâce à la directive  `v-for`, itérez sur la liste des bières afin d'afficher autant de composant `Beer.vue` qu'il y a d'éléments dans ce tableau.
+
+* Dans la classe `Beer`, ajoutez une propriété stock de type. Initiez cette propriété pour tous les éléménts définis dans le composant principal.
+
+* Lorsque l'utilisateur selectionne un élément, décrémentez le stock associé
+
+* Grâce à la directive `v-if`, affichez un produit, seulement si sa propriété stock est supérieure à 0.
+
+* Grâce à la syntaxe `v-bind:class`, ajoutez une classe CSS `last`, sur l'élément utilisant la classe XXX, si la propriété stock d'un produit atteint 1. Cette classe ne sera utilisée que pour modifier la couleur de fond 
+
+```css
+.last {
+    background-color: rgba(255, 0, 0, 0.4)
+}
+```
 
 ## PW4 - Les Pipes
 
