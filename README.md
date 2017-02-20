@@ -93,6 +93,17 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 
 ## PW4 - Les Pipes
 
+Nous allons à présent utiliser les fitlres, afin de formatter le contenu de notre application. 
+
+* Utilisez le filtre `uppercase` pour mettre en majuscule le nom des bières
+
+* Ajoutez le filtre `currency` pour ajouter le sigle `€` au prix de chaque bière.
+
+* Ajouter à la directive `v-for` le filtre `orderBy` afin d'ordonnancer les éléments par la propriété `price`.
+
+* Nous allons terminer cette partie pratique par le développement d'un nouveau filtre. Créez un filtre permettant d'arrondir
+le prix d'un bière à l'unité supérieur: le prix d'une bière à 10,5€ devra être 11€.
+
 ## PW5 - Les Ressources
 
 ## PW6 - Les Formulaires
