@@ -130,9 +130,20 @@ Dans le composant principal,
 
 * Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier)
 
+## PW6 - Le Routeur
 
-## PW6 - Les Formulaires
+Nous allons à présent intégrer dans notre application le routeur proposé par la communauté **VueJS**
 
-## PW7 - Le Routeur
+* Créez deux composants : `home` et `basket`
+  * le composant `home` aura la charge d'afficher le contenu de la page que nous avons implémenté dans les PWs précédents
+  * le composant `basket` permettra d'afficher, pour l'instant, le contenu du panier de l'utilisateur (via le filtre `json`)
+
+* Ajoutez à votre application la configuration nécessaire pour le fonctionnement du router. 
+
+* Dans le template du composant `Application`, nous allons utiliser la directive `router-view` afin d'indiquer le point d'insertion des différentes pages de l'application.
+
+- Ajoutez le composant `router-link` dans le composant `menu` afin de rediriger l'utilisateur vers les deux composants que nous venons de créer.
+
+## PW7 - Les Formulaires
 
 ## PW8 - Les Tests
