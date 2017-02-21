@@ -106,6 +106,31 @@ le prix d'un bière à l'unité supérieur: le prix d'une bière à 10,5€ devr
 
 ## PW5 - Les Ressources
 
+Nous allons à présent intégrer notre application avec une API REST. 
+Pour lancer le serveur, vous devez exécuter la commande suivante :
+
+```shell
+cd server
+npm install
+node server.js
+```
+
+Le serveur sera disponible via l'URL `http://localhost:8080/api/v1`.
+
+Cette API propose plusieurs points d'entrée :
+
+- `GET` sur `/beers` retournera la liste des bières
+- `GET` sur `/basket`  retournera le panier de l'utilisateur
+- `POST` sur `/basket` pour ajouter une nouvelle bière au panier de l'utilisateur
+
+Dans le composant principal,
+
+* Récupérez la liste des bières à afficher. Le tableau JavaScript que nous avions défini précédemment pourra 
+à présent être supprimé. 
+
+* Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier)
+
+
 ## PW6 - Les Formulaires
 
 ## PW7 - Le Routeur
