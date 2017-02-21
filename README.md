@@ -10,6 +10,8 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 * NodeJS 7.x
 * Un IDE
 
+Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
+
 ## PW0
 
 Tous les exercices qui vont suivre, se baseront sur deux pages statiques que nous avons développer. 
