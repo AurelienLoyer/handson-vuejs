@@ -134,6 +134,8 @@ Dans le composant principal,
 
 Nous allons à présent intégrer dans notre application le routeur proposé par la communauté **VueJS**
 
+* Installez le module `vue-router`
+
 * Créez deux composants : `home` et `basket`
   * le composant `home` aura la charge d'afficher le contenu de la page que nous avons implémenté dans les PWs précédents
   * le composant `basket` permettra d'afficher, pour l'instant, le contenu du panier de l'utilisateur (via le filtre `json`)
@@ -148,7 +150,7 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 Nous allons terminé par l'ajout d'un formulaire dans le composant `basket` créé précédemment. 
 
-- Affichez le panier de l'utilisateur
+- Affichez le panier de l'utilisateur. Pour cela utiliser, le template `basket.html`
 
 - Créez un object `Customer`, ayant les propriétés suivantes :
 	- name
