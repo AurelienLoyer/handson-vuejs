@@ -146,4 +146,25 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 ## PW7 - Les Formulaires
 
-## PW8 - Les Tests
+Nous allons terminé par l'ajout d'un formulaire dans le composant `basket` créé précédemment. 
+
+- Affichez le panier de l'utilisateur
+
+- Créez un object `Customer`, ayant les propriétés suivantes :
+	- name
+	- address
+	- creditCard
+
+- Dans le composant `basket`, instancier un objet de type `Customer`
+
+- Associez à chaque champs du formulaire la propriété de l'objet `Customer` associé
+
+- Lorsque le formulaire est validé, vous devez envoyer une requête POST au serveur avec les informations de l'utilisateur (l'objet `Customer`)
+à l'URL `basket/confirm`.
+
+- La requête de confirmation ne peux être exécutée que si tous les champs ont été saisis. Dynamiser l'ajout de la classe `has-error` en fonction de l'état de validation du formulaire.
+(Pour ce codelab, nous faisons ce traitement à la main, mais nous pourrions utiliser des librairies comme `vee-validate`).
+
+- Si la requête de confirmation s'exécute avec succès, veuullez redirigez l'utilisateur vers la page principale. 
+
+## PW8 - VueX
