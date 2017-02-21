@@ -148,9 +148,9 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 ## PW7 - Les Formulaires
 
-Nous allons terminé par l'ajout d'un formulaire dans le composant `basket` créé précédemment. 
+Dans ce PW, nous allons ajouter un formulaire dans le composant `basket` créé précédemment. 
 
-- Affichez le panier de l'utilisateur. Pour cela utiliser, le template `basket.html`
+- Affichez le panier de l'utilisateur. Pour cela, utilisez le template `basket.html`
 
 - Créez un object `Customer`, ayant les propriétés suivantes :
 	- name
@@ -170,3 +170,17 @@ Nous allons terminé par l'ajout d'un formulaire dans le composant `basket` cré
 - Si la requête de confirmation s'exécute avec succès, veuullez redirigez l'utilisateur vers la page principale. 
 
 ## PW8 - VueX
+
+Pour terminer ce codelab, nous allons intégrer la librairie **Vuex** afin de gérer les états de mon application. 
+
+* Installez le module `vuex`
+
+* Créez le store qui sera utilisé dans l'ensemble de l'application. Pour l'instant dans allons manipuler que le panier de l'utilisateur. 
+
+* Le `store` devra être injecté dans chaque composant de notre application 
+
+* Lorsque l'utilisateur selectionne une bière, veuillez créer une mutation permettant d'ajouter la bière selectionnée au panier
+
+* Dans les composant `basket` et `menu`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
+
+* Dans le composant principal, si la propriété stocké dans le `store` n'est pas défini, veuillez envoyer la requête vers le serveur, afin de l'initialiser. 
