@@ -8,7 +8,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/basket.html">Accéder à votre panier (3 articles - 10,10€)</a>
+            <a v-if="bieres.lenght" href="#/basket.html">Accéder à votre panier ({{bieres.lenght}} articles - {{calcul_total(bieres)}}€)</a>
+            <a v-if="!bieres.lenght" href="#/basket.html">Accéder à votre panier (vide)</a>
           </li>
         </ul>
       </div>
@@ -19,7 +20,17 @@
 
 <script>
 export default {
-  name: 'menu'
+  name: 'menu',
+  props: ['bieres'],
+  methods: {
+    calcul_total (bieres) {
+      let total = 0
+      bieres.map((biere) => {
+        total += biere.price
+      })
+      return total + '€'
+    }
+  }
 }
 </script>
 

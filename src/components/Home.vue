@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <v-menu></v-menu>
+    <v-menu :bieres="panier"></v-menu>
 
     <div class="container">
 
@@ -12,7 +12,7 @@
           <div class="row">
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <v-produit :item="produits[0]"></v-produit>
+              <v-produit v-on:ajout="ajoutPanier($event)" :item="produits[0]"></v-produit>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
@@ -59,8 +59,15 @@ export default {
     'v-footer': Footer,
     'v-produit': Produit
   },
+  methods: {
+    ajoutPanier: function (biere) {
+      console.log(biere)
+      this.panier.push(biere)
+    }
+  },
   data () {
     return {
+      panier: [],
       produits: [
         {
           'name': 'Queue de Charrue',

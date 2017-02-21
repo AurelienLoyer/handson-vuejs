@@ -8,7 +8,7 @@
       <p>{{item.description}}</p>
     </div>
     <div class="ratings">
-      <button type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
+      <button @click="ajouter" type="button" class="pull-right btn btn-primary" aria-label="Ajoutez au Panier">Ajouter</button>
       <p>
         <span class="glyphicon glyphicon-star"></span>
         <span class="glyphicon glyphicon-star"></span>
@@ -23,7 +23,13 @@
 <script>
 export default {
   name: 'produit',
-  props: ['item']
+  props: ['item'],
+  methods: {
+    ajouter () {
+      console.log(this.$emit)
+      this.$emit('ajout', this.item)
+    }
+  }
 }
 </script>
 
