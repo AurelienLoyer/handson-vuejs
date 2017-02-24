@@ -34,10 +34,10 @@ Pour cela nous allons utiliser l'utilitaire **vue-cli**.
 npm i -g vue-cli
 ```
 
-* Créez une application, utilisant le template **webpack**
+* Créez une application, utilisant le template **webpack** dans le dossier récupé
 
 ```shell
-vue init webpack devoxx
+vue init webpack .
 ```
 
 * Vous êtes à présent prêt pour intégrer notre template dans l'application qui vient d'être générée. Nous allons nous limiter pour l'instant
