@@ -34,7 +34,7 @@ Pour cela nous allons utiliser l'utilitaire **vue-cli**.
 npm i -g vue-cli
 ```
 
-* Créez une application, utilisant le template **webpack** dans le dossier récupé
+* Créez une application, utilisant le template **webpack** dans le dossier récupéré
 
 ```shell
 vue init webpack .
