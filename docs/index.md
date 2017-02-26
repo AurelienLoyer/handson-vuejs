@@ -50,7 +50,6 @@ vue init webpack .
 ```shell
 npm run dev
 ```
-
 ## PW2 - Les Composants
 
 Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour affiche le **header** et le second le bloc spécifique à une bière.
@@ -187,4 +186,3 @@ Pour terminer ce codelab, nous allons intégrer la librairie **Vuex** afin de g�
 * Dans les composant `basket` et `menu`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
 
 * Dans le composant principal, si la propriété stocké dans le `store` n'est pas défini, veuillez envoyer la requête vers le serveur, afin de l'initialiser.
->>>>>>> master
