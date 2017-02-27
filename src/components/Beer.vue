@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="thumbnail">
+  <div class="thumbnail" v-bind:class="{ last: item.stock == 1 }">
     <img v-bind:src="item.image" alt="">
     <div class="caption">
       <h4 class="pull-right">{{item.price}} €</h4>
@@ -33,4 +33,7 @@ export default {
 </script>
 
 <style lang="css">
+.last {
+    background-color: rgba(255, 0, 0, 0.4)
+}
 </style>
