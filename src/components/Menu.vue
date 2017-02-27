@@ -3,12 +3,12 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">Zenika Ecommerce</a>
+        <a class="navbar-brand" href="/">Zenika Ecommerce {{bieres.lenght}}</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a v-if="bieres.length > 0" href="#/basket.html">Accéder à votre panier ({{bieres.length}} articles - {{total}})€</a>
+            <a v-if="bieres.length > 0" href="#/basket.html">Accéder à votre panier ({{bieres.length}} articles - {{total}}€)</a>
             <a v-if="bieres.length === 0" href="#/basket.html">Accéder à votre panier (vide)</a>
           </li>
         </ul>
@@ -28,7 +28,7 @@ export default {
       this.bieres.map((biere) => {
         total += parseFloat(biere.price)
       })
-      return total
+      return Math.round(total * 100) / 100
     }
   }
 }

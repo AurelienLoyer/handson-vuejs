@@ -3,7 +3,7 @@
     <img v-bind:src="item.image" alt="">
     <div class="caption">
       <h4 class="pull-right">{{item.price}} €</h4>
-      <h4><a href="#">{{item.name}}</a>
+      <h4><a href="#">{{item.label}}</a>
       </h4>
       <p>{{item.description}}</p>
     </div>
@@ -26,7 +26,6 @@ export default {
   props: ['item'],
   methods: {
     ajouter () {
-      console.log(this.item)
       this.$emit('ajout', this.item)
     }
   }

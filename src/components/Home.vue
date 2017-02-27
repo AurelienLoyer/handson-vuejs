@@ -11,19 +11,19 @@
 
           <div class="row">
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <v-produit v-on:ajout="ajoutPanier" :item="produits[0]"></v-produit>
+              <v-beer v-on:ajout="ajoutPanier" :item="produits[0]"></v-beer>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <v-produit v-on:ajout="ajoutPanier" :item="produits[1]"></v-produit>
+              <v-beer v-on:ajout="ajoutPanier" :item="produits[1]"></v-beer>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <v-produit v-on:ajout="ajoutPanier" :item="produits[2]"></v-produit>
+              <v-beer v-on:ajout="ajoutPanier" :item="produits[2]"></v-beer>
             </div>
 
             <div class="col-sm-4 col-lg-4 col-md-4">
-              <v-produit v-on:ajout="ajoutPanier" :item="produits[3]"></v-produit>
+              <v-beer v-on:ajout="ajoutPanier" :item="produits[3]"></v-beer>
             </div>
           </div>
 
@@ -47,23 +47,26 @@
 </template>
 
 <script>
-import Produit from './Produit'
+import Beer from './Beer'
 import Menu from './Menu'
 import Footer from './Footer'
+
+// import Beer from '../models/Beer'
+// new Beer('Queue de Charrue','3,70','/static/images/queuedecharrue.jpg','La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...'),
+// new Beer('La Corbeau','3,10','/static/images/corbeau.jpg','La bière du Corbeau est une bière blonde trés gazeuse et avec une belle mousse persistante.Le nez propose des arômes de citron, de végétal et de caramel.la ...'),
+// new Beer('Jack Hammer','3,50','/static/images/jeackhammer.jpg','Selon la rumeur, la Jack Hammer serait une bière tellement houblonnée que l\'on y retrouverait plus d\'amertume que le palais humain ne puisse détecter.'),
+// new Beer('Rince Cochon','3,50','/static/images/rincecochon.jpg','Autrefois brassée à Annoeullin par la SBA sous le nom de "Le Rince Cochon", cette bière est aujourd\'hui brassée par la brasserie Haacht, en Belgique, qui ...')
 
 export default {
   name: 'home',
   components: {
     'v-menu': Menu,
     'v-footer': Footer,
-    'v-produit': Produit
+    'v-beer': Beer
   },
   methods: {
     ajoutPanier: function (biere) {
-      console.log('bouh')
-      console.log(biere)
       this.panier.push(biere)
-      console.log(this.panier)
     }
   },
   data () {
@@ -71,28 +74,28 @@ export default {
       panier: [],
       produits: [
         {
-          'name': 'Queue de Charrue',
+          'label': 'Queue de Charrue',
           'price': '3.70',
           'image': '/static/images/queuedecharrue.jpg',
           'description': 'La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...',
           'note': 4
         },
         {
-          'name': 'La Corbeau',
+          'label': 'La Corbeau',
           'price': '3.10',
           'image': '/static/images/corbeau.jpg',
           'description': 'La bière du Corbeau est une bière blonde trés gazeuse et avec une belle mousse persistante.Le nez propose des arômes de citron, de végétal et de caramel.la ...',
           'note': 3
         },
         {
-          'name': 'Jack Hammer',
+          'label': 'Jack Hammer',
           'price': '3.50',
           'image': '/static/images/jeackhammer.jpg',
           'description': 'Selon la rumeur, la Jack Hammer serait une bière tellement houblonnée que l\'on y retrouverait plus d\'amertume que le palais humain ne puisse détecter.',
           'note': 4
         },
         {
-          'name': 'Rince Cochon',
+          'label': 'Rince Cochon',
           'price': '3.50',
           'image': '/static/images/rincecochon.jpg',
           'description': 'Autrefois brassée à Annoeullin par la SBA sous le nom de "Le Rince Cochon", cette bière est aujourd\'hui brassée par la brasserie Haacht, en Belgique, qui ...',
