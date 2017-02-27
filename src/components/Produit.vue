@@ -26,7 +26,7 @@ export default {
   props: ['item'],
   methods: {
     ajouter () {
-      console.log(this.$emit)
+      console.log(this.item)
       this.$emit('ajout', this.item)
     }
   }
