@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 // import Filters from './filters/capitalize.js'
 // var Filters = require('./filters/index.js');
+import VueResource from 'vue-resource'
+
+Vue.use(VueResource)
 
 Vue.filter('capitalize', function (value) {
   if (!value) return ''

@@ -64,43 +64,16 @@ export default {
       this.panier.push(biere)
     }
   },
+  created () {
+    let api_url = 'http://localhost:8080/api/v1';
+    this.$http.get(api_url+"/beers").then(response => {
+      this.produits = response.body;
+    });
+  },
   data () {
     return {
       panier: [],
-      produits: [
-        {
-          'label': 'Queue de Charrue',
-          'price': '3.70',
-          'image': '/static/images/queuedecharrue.jpg',
-          'description': 'La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...',
-          'note': 4,
-          'stock': 1
-        },
-        {
-          'label': 'La Corbeau',
-          'price': '3.10',
-          'image': '/static/images/corbeau.jpg',
-          'description': 'La bière du Corbeau est une bière blonde trés gazeuse et avec une belle mousse persistante.Le nez propose des arômes de citron, de végétal et de caramel.la ...',
-          'note': 3,
-          'stock': 4
-        },
-        {
-          'label': 'Jack Hammer',
-          'price': '3.50',
-          'image': '/static/images/jeackhammer.jpg',
-          'description': 'Selon la rumeur, la Jack Hammer serait une bière tellement houblonnée que l\'on y retrouverait plus d\'amertume que le palais humain ne puisse détecter.',
-          'note': 4,
-          'stock': 2
-        },
-        {
-          'label': 'Rince Cochon',
-          'price': '3.50',
-          'image': '/static/images/rincecochon.jpg',
-          'description': 'Autrefois brassée à Annoeullin par la SBA sous le nom de "Le Rince Cochon", cette bière est aujourd\'hui brassée par la brasserie Haacht, en Belgique, qui ...',
-          'note': 4,
-          'stock': 3
-        }
-      ]
+      produits: []
     }
   }
 }
