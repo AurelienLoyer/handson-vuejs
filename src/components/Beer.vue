@@ -3,7 +3,7 @@
     <img v-bind:src="item.image" alt="">
     <div class="caption">
       <h4 class="pull-right">{{item.price}} €</h4>
-      <h4><a href="#">{{item.label}}</a>
+      <h4><a href="#">{{ item.label | uppercase }}</a>
       </h4>
       <p>{{item.description}}</p>
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'produit',
+  name: 'beer',
   props: ['item'],
   methods: {
     ajouter () {
