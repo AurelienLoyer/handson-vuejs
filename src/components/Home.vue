@@ -9,9 +9,15 @@
 
         <div class="col-md-12">
 
-          <div class="row">
+          <div class="row" v-if="produits.length > 0">
             <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedBeer(produits,'price','DESC')" v-if="produit.stock > 0">
               <v-beer v-on:ajout="ajoutPanier" :item="produit"></v-beer>
+            </div>
+          </div>
+
+          <div class="row" v-if="produits.length == 0">
+            <div class="col-sm-12">
+              Plus aucun produit en stock :(
             </div>
           </div>
 
@@ -46,10 +52,17 @@ export default {
     'v-footer': Footer,
     'v-beer': Beer
   },
+  data () {
+    return {
+      panier: [],
+      produits: [],
+      apiurl: 'http://localhost:1337/api/v1'
+    }
+  },
   methods: {
     sortedBeer: function (beers, orderBy, order) {
-      if (!beers) return beers
-      return beers.sort(function (a, b) {
+      return beers
+      /* return beers.sort(function (a, b) {
         if (order === 'DESC') {
           return parseFloat(b[orderBy]) - parseFloat(a[orderBy])
         } else if (order === 'ASC') {
@@ -57,24 +70,30 @@ export default {
         } else {
           return parseFloat(a[orderBy]) - parseFloat(b[orderBy])
         }
+      }) */
+    },
+    getPanier: function () {
+      this.$http.get(this.apiurl + '/basket').then(response => {
+        this.panier = response.body
+      })
+    },
+    getProduis: function () {
+      this.$http.get(this.apiurl + '/beers').then(response => {
+        this.produits = response.body
       })
     },
     ajoutPanier: function (biere) {
-      this.produits.find(produit => produit.label === biere.label).stock--
-      this.panier.push(biere)
+      this.$http.post(this.apiurl + '/basket', biere).then(response => {
+        if (response.status === 201) {
+          this.getPanier()
+          this.getProduis()
+        }
+      })
     }
   },
   created () {
-    let api_url = 'http://localhost:8080/api/v1';
-    this.$http.get(api_url+"/beers").then(response => {
-      this.produits = response.body;
-    });
-  },
-  data () {
-    return {
-      panier: [],
-      produits: []
-    }
+    this.getProduis()
+    this.getPanier()
   }
 }
 </script>
