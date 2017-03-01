@@ -24,7 +24,6 @@
       <hr>
       <!-- Footer -->
       <v-footer></v-footer>
-
     </div>
     <!-- /.container -->
 
@@ -46,7 +45,6 @@ export default {
   },
   data () {
     return {
-      panier: [],
       produits: [],
       apiurl: 'http://localhost:1337/api/v1'
     }
@@ -54,7 +52,7 @@ export default {
   methods: {
     getPanier: function () {
       this.$http.get(this.apiurl + '/basket').then(response => {
-        this.panier = response.body
+        this.$store.commit('createPanier', response.body)
       })
     },
     getProduis: function () {
@@ -65,7 +63,7 @@ export default {
     ajoutPanier: function (biere) {
       this.$http.post(this.apiurl + '/basket', biere).then(response => {
         if (response.status === 201) {
-          this.getPanier()
+          this.$store.commit('addToBasket', biere)
           this.getProduis()
         }
       })
@@ -76,6 +74,9 @@ export default {
       return this.produits.sort((a, b) => {
         return parseFloat(a.price) - parseFloat(b.price)
       })
+    },
+    panier: function () {
+      return this.$store.state.panier
     }
   },
   created () {
