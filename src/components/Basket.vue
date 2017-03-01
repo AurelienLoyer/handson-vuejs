@@ -66,18 +66,24 @@ export default {
   },
   data () {
     return {
-      panier: [],
       apiurl: 'http://localhost:1337/api/v1'
     }
   },
   created () {
     this.getPanier()
   },
+  computed: {
+    panier: function () {
+      return this.$store.state.panier
+    }
+  },
   methods: {
     getPanier: function () {
-      this.$http.get(this.apiurl + '/basket').then(response => {
-        this.panier = response.body
-      })
+      if (this.$store.state.panier.length === 0) {
+        this.$http.get(this.apiurl + '/basket').then(response => {
+          this.$store.commit('createPanier', response.body)
+        })
+      }
     }
   }
 }
