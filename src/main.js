@@ -5,6 +5,7 @@ import App from './App'
 // import Filters from './filters/capitalize.js'
 // var Filters = require('./filters/index.js');
 import VueResource from 'vue-resource'
+import Router from './Router'
 
 Vue.use(VueResource)
 
@@ -24,5 +25,6 @@ Vue.filter('uppercase', function (value) {
 new Vue({
   el: '#app',
   template: '<App/>',
+  router: Router,
   components: { App }
 })
