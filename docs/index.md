@@ -50,6 +50,22 @@ vue init webpack .
 ```shell
 npm run dev
 ```
+
+Afin d'éviter les problèmes avec ESLint, nous vous conseillons de le désactiver pour l'ensemble du codelab. Pour cela, dans le fichier `build/webpack.base.conf.js`, veuillez commenter 
+la configuration du loader `eslint-loader`
+
+```JavaScript
+{
+    test: /\.(js|vue)$/,
+    loader: 'eslint-loader',
+    enforce: "pre",
+    include: [resolve('src'), resolve('test')],
+    options: {
+        formatter: require('eslint-friendly-formatter')
+    }
+},
+```
+
 ## PW2 - Les Composants
 
 Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour affiche le **header** et le second le bloc spécifique à une bière.
