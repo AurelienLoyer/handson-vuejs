@@ -7,14 +7,8 @@
       <div class="panel panel-default">
         <div class="panel-heading">Basket</div>
         <ul class="list-group">
-          <li class="list-group-item">
-            La Corbeau <span class="label label-primary pull-right">3,10 €</span>
-          </li>
-          <li class="list-group-item">
-            Jack Hammer <span class="label label-primary pull-right">3,50 €</span>
-          </li>
-          <li class="list-group-item">
-            Rince Cochon <span class="label label-primary pull-right">3,50 €</span>
+          <li class="list-group-item" v-for="produit in panier">
+            {{produit.label}} <span class="label label-primary pull-right">{{produit.price}} €</span>
           </li>
         </ul>
       </div>
@@ -76,7 +70,16 @@ export default {
       apiurl: 'http://localhost:1337/api/v1'
     }
   },
-  created () {}
+  created () {
+    this.getPanier()
+  },
+  methods: {
+    getPanier: function () {
+      this.$http.get(this.apiurl + '/basket').then(response => {
+        this.panier = response.body
+      })
+    }
+  }
 }
 </script>
 
