@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <v-home></v-home>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-import Home from 'components/Home'
-
 export default {
-  name: 'app',
-  components: {
-    'v-home': Home
-  }
+  name: 'app'
 }
 </script>
 
