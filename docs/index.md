@@ -4,7 +4,7 @@ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec 
 
 ## Prérequis
 
-Pour faire ce codelab, vous avez besoin des outils suivants :  
+Pour faire ce codelab, vous avez besoin des outils suivants :
 
 * GIT
 * NodeJS 7.x
@@ -79,13 +79,13 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 
 * Grâce à la directive  `v-for`, itérez sur la liste des bières afin d'afficher autant de composant `Beer.vue` qu'il y a d'éléments dans ce tableau.
 
-* Dans la classe `Beer`, ajoutez une propriété stock de type. Initiez cette propriété pour tous les éléménts définis dans le composant principal.
+* Dans notre tableau de `Beer`, ajoutez une propriété stock de type Integer. Initiez cette propriété pour tous les éléménts définis dans le composant principal.
 
 * Lorsque l'utilisateur selectionne un élément, décrémentez le stock associé
 
 * Grâce à la directive `v-if`, affichez un produit, seulement si sa propriété stock est supérieure à 0.
 
-* Grâce à la syntaxe `v-bind:class`, ajoutez une classe CSS `last`, sur l'élément utilisant la classe XXX, si la propriété stock d'un produit atteint 1. Cette classe ne sera utilisée que pour modifier la couleur de fond
+* Grâce à la syntaxe `v-bind:class`, ajoutez une classe CSS `last`, sur l'élément utilisant la classe 'thumbnail', si la propriété stock d'un produit atteint 1. Cette classe ne sera utilisée que pour modifier la couleur de fond
 
 ```css
 .last {
@@ -95,16 +95,16 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 
 ## PW4 - Les Pipes
 
-Nous allons à présent utiliser les fitlres, afin de formatter le contenu de notre application.
+!!!! plus de pipe dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
+https://vuejs.org/v2/guide/syntax.html#Filters
 
-* Utilisez le filtre `uppercase` pour mettre en majuscule le nom des bières
+Nous allons à présent créer des fitlres, afin de formatter le contenu de notre application.
 
-* Ajoutez le filtre `currency` pour ajouter le sigle `€` au prix de chaque bière.
+* Créez le filtre `uppercase` pour mettre en majuscule le nom des bières
 
-* Ajouter à la directive `v-for` le filtre `orderBy` afin d'ordonnancer les éléments par la propriété `price`.
+* Créez le filtre `currency` pour ajouter le sigle `€` au prix de chaque bière.
 
-* Nous allons terminer cette partie pratique par le développement d'un nouveau filtre. Créez un filtre permettant d'arrondir
-le prix d'un bière à l'unité supérieur: le prix d'une bière à 10,5€ devra être 11€.
+* Nous allons terminer cette partie pratique par le développement d'une `Computed Properties`. Itérer la directive `v-for` avec cette `Computed Properties` afin d'ordonnancer les éléments par la propriété `price`.
 
 ## PW5 - Les Ressources
 
@@ -117,7 +117,7 @@ npm install
 node server.js
 ```
 
-Le serveur sera disponible via l'URL `http://localhost:8080/api/v1`.
+Le serveur sera disponible via l'URL `http://localhost:1337/api/v1`.
 
 Cette API propose plusieurs points d'entrée :
 
@@ -125,10 +125,22 @@ Cette API propose plusieurs points d'entrée :
 - `GET` sur `/basket`  retournera le panier de l'utilisateur
 - `POST` sur `/basket` pour ajouter une nouvelle bière au panier de l'utilisateur
 
+Pour consommer cette api nous allons utiliser `vue-ressource`
+
+```shell
+npm install vue-resource --save
+```
+
+* N'oubliez pas d'ajouter vue-resource dans votre application vuejs (fichier main.js) *
+```js
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+```
+
 Dans le composant principal,
 
 * Récupérez la liste des bières à afficher. Le tableau JavaScript que nous avions défini précédemment pourra
-à présent être supprimé.
+à présent être remplacé.
 
 * Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier)
 
@@ -140,7 +152,7 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 * Créez deux composants : `home` et `basket`
   * le composant `home` aura la charge d'afficher le contenu de la page que nous avons implémenté dans les PWs précédents
-  * le composant `basket` permettra d'afficher, pour l'instant, le contenu du panier de l'utilisateur (via le filtre `json`)
+  * le composant `basket` qui doit afficher, pour l'instant, le contenu du panier de l'utilisateur au format json
 
 * Ajoutez à votre application la configuration nécessaire pour le fonctionnement du router.
 
@@ -150,7 +162,7 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 ## PW7 - Les Formulaires
 
-Dans ce PW, nous allons ajouter un formulaire dans le composant `basket` créé précédemment.
+Dans ce PW, nous allons editer le formulaire dans le composant `basket` créé précédemment.
 
 - Affichez le panier de l'utilisateur. Pour cela, utilisez le template `basket.html`
 
