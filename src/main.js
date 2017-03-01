@@ -11,6 +11,7 @@ Vue.use(VueResource)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  template: '<App/>',
   router: Router,
   components: { App }
 })
