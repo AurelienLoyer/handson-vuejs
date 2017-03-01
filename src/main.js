@@ -4,11 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import VueResource from 'vue-resource'
 import Router from './Router'
-import './filters/index'
 import Vuex from 'vuex'
+import VeeValidate from 'vee-validate'
+import './filters/index'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
+Vue.use(VeeValidate)
 
 const store = new Vuex.Store({
   state: {

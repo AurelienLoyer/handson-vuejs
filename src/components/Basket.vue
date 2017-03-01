@@ -16,24 +16,24 @@
       <div class="panel panel-default">
         <div class="panel-heading">Order</div>
         <div class="panel-body">
-          <form>
-            <div class="form-group has-error">
+          <form @submit.prevent="validateBeforeSubmit">
+            <div class="form-group" v-bind:class="{ 'has-error': errors.has('name') }">
               <label class="control-label" for="name">Name</label>
-              <input type="text" id="name" class="form-control" name="name" required>
+              <input type="text" v-validate="'required'" :model="customer.name" id="name" class="form-control" name="name">
             </div>
 
-            <div class="form-group has-error">
+            <div class="form-group" v-bind:class="{ 'has-error': errors.has('address') }">
               <label class="control-label" for="address">Address</label>
-              <textarea id="address" class="form-control" name="address" required ></textarea>
+              <textarea id="address" v-validate="'required'" :model="customer.address" class="form-control" name="address" ></textarea>
             </div>
 
-            <div class="form-group has-error">
+            <div class="form-group" v-bind:class="{ 'has-error': errors.has('creditCard') }">
               <label class="control-label" for="creditCard">Credit card number</label>
-              <input id="creditCard" class="form-control" name="creditCard" pattern="^[0-9]{3}-[0-9]{3}$">
+              <input id="creditCard" v-validate="'required|regex:^[0-9]{3}-[0-9]{3}$'" :model="customer.creditCard" class="form-control" name="creditCard">
             </div>
 
             <div class="col-xs-12">
-              <button type="submit" class="btn btn-success pull-right">
+              <button type="submit" class="btn btn-success pull-right" :disabled="errors.any()">
                 Validate
               </button>
             </div>
@@ -66,7 +66,13 @@ export default {
   },
   data () {
     return {
-      apiurl: 'http://localhost:1337/api/v1'
+      panier: [],
+      apiurl: 'http://localhost:1337/api/v1',
+      customer: {
+        'name': '',
+        'adresse': '',
+        'creditCard': ''
+      }
     }
   },
   created () {
@@ -84,6 +90,17 @@ export default {
           this.$store.commit('createPanier', response.body)
         })
       }
+    },
+    validateBeforeSubmit () {
+      this.$validator.validateAll().then(success => {
+        if (!success) {
+          // handle error
+          return
+        }
+        this.$http.post(this.apiurl + '/basket/confirm', this.customer).then(response => {
+          this.$router.push('/')
+        })
+      })
     }
   }
 }
