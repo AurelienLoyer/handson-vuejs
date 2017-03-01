@@ -26,10 +26,10 @@ app.get(context + '/beers', function (req, res) {
 var createHandler = function(req, res) {
   basket.push(req.body);
   beers = beers.map(beer => {
-    if(beer.title.toUpperCase() === req.body.title.toUpperCase()){
+    if(beer.label.toUpperCase() === req.body.label.toUpperCase()){
       beer.stock--;
     }
-    return product;
+    return beer;
   })
   res.send(201, req.body);
 }
