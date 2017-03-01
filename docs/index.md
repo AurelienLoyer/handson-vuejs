@@ -193,8 +193,8 @@ Pour terminer ce codelab, nous allons intégrer la librairie **Vuex** afin de g�
 
 * Le `store` devra être injecté dans chaque composant de notre application
 
+* Veuillez initialiser un variable `basket` dans le `store` avec le résultat de la requête HTTP permettant de récupérer le panier de l'utilisateur. 
+
 * Lorsque l'utilisateur selectionne une bière, veuillez créer une mutation permettant d'ajouter la bière selectionnée au panier
 
-* Dans les composant `basket` et `menu`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
-
-* Dans le composant principal, si la propriété stocké dans le `store` n'est pas défini, veuillez envoyer la requête vers le serveur, afin de l'initialiser.
+* Dans les composant `basket` et `home`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
