@@ -8,13 +8,13 @@
       <div class="row">
 
         <div class="col-md-12">
-          <div class="row" v-if="produits.length > 0">
+          <div class="row">
             <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedProduct" v-if="produit.stock > 0">
               <v-beer v-on:ajout="ajoutPanier" :item="produit"></v-beer>
             </div>
           </div>
         </div>
-        
+
       </div>
 
     </div>
@@ -74,8 +74,14 @@ export default {
   computed: {
     sortedProduct: function () {
       return this.produits.sort((a, b) => {
-        return parseFloat(b.price) - parseFloat(a.price)
+        return parseFloat(a.price) - parseFloat(b.price)
       })
+    }
+  },
+  data () {
+    return {
+      panier: [],
+      produits: []
     }
   },
   created () {

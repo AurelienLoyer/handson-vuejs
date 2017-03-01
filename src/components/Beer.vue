@@ -2,7 +2,7 @@
   <div class="thumbnail" v-bind:class="{ last: item.stock == 1 }">
     <img v-bind:src="item.image" alt="">
     <div class="caption">
-      <h4 class="pull-right">{{item.price}} €</h4>
+      <h4 class="pull-right">{{item.price | currency}}</h4>
       <h4><a href="#">{{ item.label | uppercase }}</a>
       </h4>
       <p>{{item.description}}</p>
