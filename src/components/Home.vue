@@ -10,7 +10,7 @@
         <div class="col-md-12">
 
           <div class="row">
-            <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedBeer(produits,'price','DESC')" v-if="produit.stock > 0">
+            <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedProduct" v-if="produit.stock > 0">
               <v-beer v-on:ajout="ajoutPanier" :item="produit"></v-beer>
             </div>
           </div>
@@ -47,21 +47,16 @@ export default {
     'v-beer': Beer
   },
   methods: {
-    sortedBeer: function (beers, orderBy, order) {
-      if (!beers) return beers
-      return beers.sort(function (a, b) {
-        if (order === 'DESC') {
-          return parseFloat(b[orderBy]) - parseFloat(a[orderBy])
-        } else if (order === 'ASC') {
-          return parseFloat(a[orderBy]) - parseFloat(b[orderBy])
-        } else {
-          return parseFloat(a[orderBy]) - parseFloat(b[orderBy])
-        }
-      })
-    },
     ajoutPanier: function (biere) {
       this.produits.find(produit => produit.label === biere.label).stock--
       this.panier.push(biere)
+    }
+  },
+  computed: {
+    sortedProduct: function () {
+      return this.produits.sort((a, b) => {
+        return parseFloat(a.price) - parseFloat(b.price)
+      })
     }
   },
   data () {
