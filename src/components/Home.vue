@@ -8,21 +8,12 @@
       <div class="row">
 
         <div class="col-md-12">
-
           <div class="row" v-if="produits.length > 0">
             <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedBeer(produits,'price','DESC')" v-if="produit.stock > 0">
               <v-beer v-on:ajout="ajoutPanier" :item="produit"></v-beer>
             </div>
           </div>
-
-          <div class="row" v-if="produits.length == 0">
-            <div class="col-sm-12">
-              Plus aucun produit en stock :(
-            </div>
-          </div>
-
         </div>
-
       </div>
 
     </div>
