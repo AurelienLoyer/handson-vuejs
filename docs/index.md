@@ -195,7 +195,7 @@ Dans ce PW, nous allons editer le formulaire dans le composant `basket` créé p
 à l'URL `basket/confirm`.
 
 - La requête de confirmation ne peux être exécutée que si tous les champs ont été saisis. Dynamiser l'ajout de la classe `has-error` en fonction de l'état de validation du formulaire.
-(Pour ce codelab, nous faisons ce traitement à la main, mais nous pourrions utiliser des librairies comme `vee-validate`).
+Nous utiliserons la librairie `vee-validate`.
 
 - Si la requête de confirmation s'exécute avec succès, veuullez redirigez l'utilisateur vers la page principale.
 
