@@ -1,29 +1,29 @@
 [
   {
-    "title": "Queue de Charrue",
+    "label": "Queue de Charrue",
     "description": "La Queue de Charrue est une famille de bières brassées pour la Brasserie Vanuxeem. La plus connue et typique est la Queue de Charrue brune. Son nom ...",
-    "photo": "/images/queuedecharrue.jpg",
+    "image": "https://img.saveur-biere.com/img/p/1653-14474-v4_product_img.jpg",
     "price": 3.70,
     "stock": 2
   },
   {
-    "title": "La Corbeau",
+    "label": "La Corbeau",
     "description": "La bière du Corbeau est une bière blonde trés gazeuse et avec une belle mousse persistante.Le nez propose des arômes de citron, de végétal et de caramel.la ...",
-    "photo": "/images/corbeau.jpg",
+    "image": "https://img.saveur-biere.com/img/p/5812-13395-v4_product_img.jpg",
     "price": 3.10,
     "stock": 2
   },
   {
-    "title": "Jack Hammer",
+    "label": "Jack Hammer",
     "description": "Selon la rumeur, la Jack Hammer serait une bière tellement houblonnée que l'on y retrouverait plus d'amertume que le palais humain ne puisse détecter.",
-    "photo": "/images/jeackhammer.jpg",
+    "image": "https://img.saveur-biere.com/img/p/5125-14339-v4_product_img.jpg",
     "price": 3.50,
     "stock": 2
   },
   {
-    "title": "Rince Cochon",
+    "label": "Rince Cochon",
     "description": "Autrefois brassée à Annoeullin par la SBA sous le nom de \"Le Rince Cochon\", cette bière est aujourd'hui brassée par la brasserie Haacht, en Belgique, qui ...",
-    "photo": "/images/rincecochon.jpg",
+    "image": "https://img.saveur-biere.com/img/p/2702-14497-v4_product_img.jpg",
     "price": 3.50,
     "stock": 2
   }
