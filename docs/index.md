@@ -8,7 +8,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 * GIT
 * NodeJS 7.x
-* Un IDE
+* Un IDE (Visual Studio Code par exemple)
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
