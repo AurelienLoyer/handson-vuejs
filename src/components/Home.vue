@@ -8,12 +8,13 @@
       <div class="row">
 
         <div class="col-md-12">
-          <div class="row" v-if="produits.length > 0">
-            <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedBeer(produits,'price','DESC')" v-if="produit.stock > 0">
+          <div class="row">
+            <div class="col-sm-4 col-lg-4 col-md-4" v-for="produit in sortedProduct" v-if="produit.stock > 0">
               <v-beer v-on:ajout="ajoutPanier" :item="produit"></v-beer>
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -51,18 +52,6 @@ export default {
     }
   },
   methods: {
-    sortedBeer: function (beers, orderBy, order) {
-      return beers
-      /* return beers.sort(function (a, b) {
-        if (order === 'DESC') {
-          return parseFloat(b[orderBy]) - parseFloat(a[orderBy])
-        } else if (order === 'ASC') {
-          return parseFloat(a[orderBy]) - parseFloat(b[orderBy])
-        } else {
-          return parseFloat(a[orderBy]) - parseFloat(b[orderBy])
-        }
-      }) */
-    },
     getPanier: function () {
       this.$http.get(this.apiurl + '/basket').then(response => {
         this.panier = response.body
@@ -80,6 +69,19 @@ export default {
           this.getProduis()
         }
       })
+    }
+  },
+  computed: {
+    sortedProduct: function () {
+      return this.produits.sort((a, b) => {
+        return parseFloat(a.price) - parseFloat(b.price)
+      })
+    }
+  },
+  data () {
+    return {
+      panier: [],
+      produits: []
     }
   },
   created () {
