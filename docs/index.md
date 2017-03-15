@@ -8,16 +8,16 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 * GIT
 * NodeJS 7.x
-* Un IDE (Visual Studio Code par exemple)
+* Un IDE
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
 ## PW0
 
 Tous les exercices qui vont suivre, se baseront sur deux pages statiques que nous avons développer.
-Le but sera de mettre à page cette page pour l'intégrer dans une application VueJS.
+Le but sera d'intégrer cette page dans une application VueJS.
 
-Pour récupérer ce template statique, veuillez exécuter la commande suivante :
+Pour récupérer ces templates, veuillez exécuter la commande suivante :
 
 ```shell
 git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
@@ -40,7 +40,9 @@ npm i -g vue-cli
 vue init webpack .
 ```
 
-* Vous êtes à présent prêt pour intégrer notre template dans l'application qui vient d'être générée. Nous allons nous limiter pour l'instant
+Pour éviter des soucis avec ESLint, nous vous conseillons de le désactiver lors de la génération de l'application. 
+
+* Vous êtes à présent prêt pour intégrer le template dans l'application qui vient d'être générée. Nous allons nous limiter pour l'instant
 à la page `home.html`. Voici les prérequis :
     * Les éléments à l'extérieur de `<body>` doivent se trouver dans le fichier `index.html`
     * le contenu de `<body>` doit être inséré dans le composant `App.vue`
@@ -49,21 +51,6 @@ vue init webpack .
 
 ```shell
 npm run dev
-```
-
-Afin d'éviter les problèmes avec ESLint, nous vous conseillons de le désactiver pour l'ensemble du codelab. Pour cela, dans le fichier `build/webpack.base.conf.js`, veuillez commenter 
-la configuration du loader `eslint-loader`
-
-```JavaScript
-{
-    test: /\.(js|vue)$/,
-    loader: 'eslint-loader',
-    enforce: "pre",
-    include: [resolve('src'), resolve('test')],
-    options: {
-        formatter: require('eslint-friendly-formatter')
-    }
-},
 ```
 
 ## PW2 - Les Composants
@@ -80,7 +67,8 @@ Nous allons à présent créer nos premiers composants. Le premier sera utilisé
 
 * Remplacez dans le composant principal le menu initial par le composant que vous venez de créer.
 
-* Dans le composant principal, instanciez un nouveau tableau de Beer.
+* Dans le composant principal, instanciez un nouveau tableau d'objets, correspondant aux items que nous désirons afficher. Un objet possedera 
+trois propriétés : label, description, photo et price. 
 
 * Nous allons à présent créer un composant `Beer.vue` qui sera en charge d'afficher le détail d'un élément de notre tableau précédement créé. Voici les prérequis pour ce composant :
     * Il utilisera le template pour l'instant présent dans le composant principal
@@ -93,9 +81,9 @@ Nous allons à présent créer nos premiers composants. Le premier sera utilisé
 
 Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour dynamiser notre page.
 
-* Grâce à la directive  `v-for`, itérez sur la liste des bières afin d'afficher autant de composant `Beer.vue` qu'il y a d'éléments dans ce tableau.
+* Grâce à la directive  `v-for`, itérez sur la liste des bières afin d'afficher autant de composant `Beer.vue` qu'il y a d'éléments dans le tableau.
 
-* Dans notre tableau de `Beer`, ajoutez une propriété stock de type Integer. Initiez cette propriété pour tous les éléménts définis dans le composant principal.
+* Dans notre tableau de `Beer`, ajoutez une propriété stock. Initiez cette propriété à 5 pour tous les éléménts du tableau utilisé par le composant principal.
 
 * Lorsque l'utilisateur selectionne un élément, décrémentez le stock associé
 
@@ -109,12 +97,12 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 }
 ```
 
-## PW4 - Les Pipes
+## PW4 - Les Filtres
 
-!!!! plus de pipe dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
+!!!! plus de filtre dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
 https://vuejs.org/v2/guide/syntax.html#Filters
 
-Nous allons à présent créer des fitlres, afin de formatter le contenu de notre application.
+Nous allons à présent créer des filtres, afin de formatter le contenu de notre application.
 
 * Créez le filtre `uppercase` pour mettre en majuscule le nom des bières
 
@@ -124,7 +112,7 @@ Nous allons à présent créer des fitlres, afin de formatter le contenu de notr
 
 ## PW5 - Les Ressources
 
-Nous allons à présent intégrer notre application avec une API REST.
+Nous allons à présent intégrer à notre application une API REST.
 Pour lancer le serveur, vous devez exécuter la commande suivante :
 
 ```shell
@@ -172,7 +160,7 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 
 * Ajoutez à votre application la configuration nécessaire pour le fonctionnement du router.
 
-* Dans le template du composant `Application`, nous allons utiliser la directive `router-view` afin d'indiquer le point d'insertion des différentes pages de l'application.
+* Dans le template du composant `App`, nous allons utiliser la directive `router-view` afin d'indiquer le point d'insertion des différentes pages de l'application.
 
 - Ajoutez le composant `router-link` dans le composant `menu` afin de rediriger l'utilisateur vers les deux composants que nous venons de créer.
 
@@ -182,20 +170,14 @@ Dans ce PW, nous allons editer le formulaire dans le composant `basket` créé p
 
 - Affichez le panier de l'utilisateur. Pour cela, utilisez le template `basket.html`
 
-- Créez un object `Customer`, ayant les propriétés suivantes :
-	- name
-	- address
-	- creditCard
+- Dans le composant `basket`, créez un objet avec les propriétés `name`, `address` et `creditCard`
 
-- Dans le composant `basket`, instancier un objet de type `Customer`
+- Associez à chaque champs du formulaire la propriété de l'objet créé précédemment
 
-- Associez à chaque champs du formulaire la propriété de l'objet `Customer` associé
-
-- Lorsque le formulaire est validé, vous devez envoyer une requête POST au serveur avec les informations de l'utilisateur (l'objet `Customer`)
-à l'URL `basket/confirm`.
+- Lorsque le formulaire est validé, vous devez envoyer une requête POST au serveur avec les informations de l'utilisateur à l'URL `basket/confirm`.
 
 - La requête de confirmation ne peux être exécutée que si tous les champs ont été saisis. Dynamiser l'ajout de la classe `has-error` en fonction de l'état de validation du formulaire.
-Nous utiliserons la librairie `vee-validate`. Plus d'information sur la documentation : http://vee-validate.logaretm.com/
+(Pour ce codelab, nous faisons ce traitement à la main, mais nous pourrions utiliser des librairies comme `vee-validate`).
 
 - Si la requête de confirmation s'exécute avec succès, veuullez redirigez l'utilisateur vers la page principale.
 
@@ -209,8 +191,8 @@ Pour terminer ce codelab, nous allons intégrer la librairie **Vuex** afin de g�
 
 * Le `store` devra être injecté dans chaque composant de notre application
 
-* Veuillez initialiser un variable `basket` dans le `store` avec le résultat de la requête HTTP permettant de récupérer le panier de l'utilisateur. 
-
 * Lorsque l'utilisateur selectionne une bière, veuillez créer une mutation permettant d'ajouter la bière selectionnée au panier
 
-* Dans les composant `basket` et `home`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
+* Dans les composant `basket` et `menu`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires
+
+* Dans le composant principal, si la propriété stocké dans le `store` n'est pas défini, veuillez envoyer la requête vers le serveur, afin de l'initialiser.
