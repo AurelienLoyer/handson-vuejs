@@ -66,7 +66,6 @@ export default {
   },
   data () {
     return {
-      panier: [],
       apiurl: 'http://localhost:1337/api/v1',
       customer: {
         'name': '',
@@ -80,11 +79,14 @@ export default {
   },
   computed: {
     panier: function () {
+      console.log('bouh', this.$store.state.panier)
       return this.$store.state.panier
     }
   },
   methods: {
     getPanier: function () {
+      console.log('getPanier')
+      console.log(this.$store.state.panier)
       if (this.$store.state.panier.length === 0) {
         this.$http.get(this.apiurl + '/basket').then(response => {
           this.$store.commit('createPanier', response.body)
