@@ -78,12 +78,6 @@ export default {
       })
     }
   },
-  data () {
-    return {
-      panier: [],
-      produits: []
-    }
-  },
   created () {
     this.getProduis()
     this.getPanier()
