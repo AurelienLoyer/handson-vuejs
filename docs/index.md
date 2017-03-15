@@ -97,6 +97,10 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 }
 ```
 
+* Dans le composant `menu`, dynamiser le lien redirigeant l'utilisateur vers la page `basket`
+    * Si le panier est vide, affichez `Accéder à votre panier (vide)`
+    * Si il y a au moins 1 produit, affichez `Accéder à votre panier (1 articles - 10€)`
+
 ## PW4 - Les Filtres
 
 !!!! plus de filtre dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
@@ -170,7 +174,7 @@ Dans ce PW, nous allons editer le formulaire dans le composant `basket` créé p
 
 - Affichez le panier de l'utilisateur. Pour cela, utilisez le template `basket.html`
 
-- Dans le composant `basket`, créez un objet avec les propriétés `name`, `address` et `creditCard`
+- Dans le composant `basket`, créez un objet `customer` avec les propriétés `name`, `address` et `creditCard`
 
 - Associez à chaque champs du formulaire la propriété de l'objet créé précédemment
 
