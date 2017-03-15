@@ -8,8 +8,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a v-if="bieres.length > 0" href="#/basket.html">Accéder à votre panier ({{bieres.length}} articles - {{total}}€)</a>
-            <a v-if="bieres.length === 0" href="#/basket.html">Accéder à votre panier (vide)</a>
+            <a href="#/basket.html">Accéder à votre panier ({{bieres.length}} articles - {{total}}€)</a>
           </li>
         </ul>
       </div>
