@@ -12,6 +12,16 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
+Afin d'éviter les problèmes de réseau le jour J, veuiller cloner ce projet et exécuter les commandes suivantes :
+
+```shell
+git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
+npm i -g vue-cli
+cd devoxx-vuejs
+vue init webpack .
+npm install vue-resource vue-router vee-validate vuex --save
+```
+
 ## PW0
 
 Tous les exercices qui vont suivre, se baseront sur deux pages statiques que nous avons développer.
@@ -97,6 +107,10 @@ Dans ce TP, nous allons utiliser les directives `v-for`, `v-if` et `v-bind` pour
 }
 ```
 
+* Dans le composant `menu`, dynamiser le lien redirigeant l'utilisateur vers la page `basket`
+    * Si le panier est vide, affichez `Accéder à votre panier (vide)`
+    * Si il y a au moins 1 produit, affichez `Accéder à votre panier (1 articles - 10€)`
+
 ## PW4 - Les Filtres
 
 !!!! plus de filtre dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
@@ -170,7 +184,7 @@ Dans ce PW, nous allons editer le formulaire dans le composant `basket` créé p
 
 - Affichez le panier de l'utilisateur. Pour cela, utilisez le template `basket.html`
 
-- Dans le composant `basket`, créez un objet avec les propriétés `name`, `address` et `creditCard`
+- Dans le composant `basket`, créez un objet `customer` avec les propriétés `name`, `address` et `creditCard`
 
 - Associez à chaque champs du formulaire la propriété de l'objet créé précédemment
 
