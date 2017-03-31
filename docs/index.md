@@ -19,7 +19,7 @@ git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
 npm i -g vue-cli
 cd devoxx-vuejs
 vue init webpack .
-npm install vue-resource vue-router vee-validate vuex --save
+npm install vue-resource vue-router vue-validate vuex --save
 ```
 
 ## PW0
