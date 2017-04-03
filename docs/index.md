@@ -50,7 +50,13 @@ npm i -g vue-cli
 vue init webpack .
 ```
 
-Pour éviter des soucis avec ESLint, nous vous conseillons de le désactiver lors de la génération de l'application.
+Pour cette première étape, nous vous conseillons de le désactiver **eslint** et le routeur lors de la génération de l'application.
+
+* Vous devez à présent installer les dépendances avec **NPM** ou **Yarn**
+
+```shell
+npm i 
+```
 
 * L'application se lance avec la commande suivante :
 
