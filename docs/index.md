@@ -52,11 +52,6 @@ vue init webpack .
 
 Pour éviter des soucis avec ESLint, nous vous conseillons de le désactiver lors de la génération de l'application.
 
-* Vous êtes à présent prêt pour intégrer le template dans l'application qui vient d'être générée. Nous allons nous limiter pour l'instant
-à la page `home.html`. Voici les prérequis :
-    * les éléments à l'extérieur de `<body>` doivent se trouver dans le fichier `index.html`
-    * le contenu de `<body>` doit être inséré dans le composant `App.vue`
-
 * L'application se lance avec la commande suivante :
 
 ```shell
@@ -65,20 +60,17 @@ npm run dev
 
 ## PW2 - Les Composants
 
-Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour afficher le **header** et le second pour le bloc spécifique à une bière.
+* Vous êtes à présent prêt pour intégrer le template dans l'application qui vient d'être générée. Nous allons nous limiter pour l'instant à la page `home.html`. Voici les prérequis :
+    * les éléments à l'extérieur de `<body>` doivent se trouver dans le fichier `index.html`
+    * le contenu de `<body>` doit être inséré dans le composant `App.vue`
 
-* Définissez une classe `Beer` qui possèdera les propriétés suivantes :
-    * label
-    * description
-    * photo
-    * price
+Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour afficher le **header** et le second pour le bloc spécifique à une bière.
 
 * Créez un nouveau composant `menu.vue` dans lequel vous allez implémenter le menu principal de l'application. Ce composant possèdera un paramètre, un tableau de produits (le panier de l'utilisateur). Ce tableau sera utilisé pour calculer le prix total du panier.
 
 * Remplacez dans le composant principal le menu initial par le composant que vous venez de créer.
 
-* Dans le composant principal, instanciez un nouveau tableau d'objets, correspondant aux items que nous désirons afficher. Un objet possedera
-quatre propriétés : label, description, photo et price.
+* Dans le composant principal, instanciez un nouveau tableau d'objets, correspondant aux items que nous désirons afficher. Un objet possedera quatre propriétés : label, description, photo et price.
 
 * Nous allons à présent créer un composant `Beer.vue` qui sera en charge d'afficher le détail d'un élément du tableau précédement créé. Voici les prérequis pour ce composant :
     * Il utilisera le template pour l'instant présent dans le composant principal
