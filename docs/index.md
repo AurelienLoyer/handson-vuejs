@@ -76,7 +76,7 @@ Nous allons à présent créer nos premiers composants. Le premier sera utilisé
 
 * Remplacez dans le composant principal le menu initial par le composant que vous venez de créer.
 
-* Dans le composant principal, instanciez un nouveau tableau d'objets, correspondant aux items que nous désirons afficher. Un objet possedera quatre propriétés : label, description, photo et price.
+* Dans le composant principal, instanciez un nouveau tableau d'objets, correspondant aux items que nous désirons afficher. Vous pouvez récupérer le contenu du fichier `server/beers.json`
 
 * Nous allons à présent créer un composant `Beer.vue` qui sera en charge d'afficher le détail d'un élément du tableau précédement créé. Voici les prérequis pour ce composant :
     * Il utilisera le template pour l'instant présent dans le composant principal
