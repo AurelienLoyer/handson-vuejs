@@ -5,7 +5,7 @@
       <div class="navbar-header">
         <router-link to="/" class="navbar-brand">Zenika Ecommerce</router-link>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
             <router-link v-if="bieres.length > 0" to="/basket">Accéder à votre panier ({{bieres.length}} articles - {{total}}€)</router-link>
