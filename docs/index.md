@@ -15,7 +15,7 @@ Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devt
 Afin d'éviter les problèmes de réseau le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :
 
 ```shell
-git clone -b step0 https://github.com/Gillespie59/devoxx-vuejs
+git clone -b step1 https://github.com/Gillespie59/devoxx-vuejs
 npm i -g vue-cli
 cd devoxx-vuejs
 vue init webpack .
