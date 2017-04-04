@@ -1,5 +1,0 @@
-{
-	"port": 1337,
-	"beers": "./beers.json",
-	"root": "../"
-}
