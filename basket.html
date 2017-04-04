@@ -25,7 +25,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Zenika Ecommerce</a>
+                <a class="navbar-brand" href="/home.html">Zenika Ecommerce</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="col-xs-12">
-                        <button type="submit" class="btn btn-success pull-right">
+                        <button type="submit" class="btn btn-success pull-right" [disabled]="!customerForm.valid">
                     Validate
                 </button>
                     </div>
