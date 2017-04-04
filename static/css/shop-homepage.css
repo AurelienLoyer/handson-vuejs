@@ -59,3 +59,12 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.navbar-header {
+    float: left;
+}
+
+.container>.navbar-header {
+    margin-left: 0;
+    margin-right: 0;
+}
