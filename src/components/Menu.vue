@@ -5,7 +5,7 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Zenika Ecommerce</a>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
             <a href="#/basket.html">Accéder à votre panier ({{bieres.length}} articles - {{total}}€)</a>
