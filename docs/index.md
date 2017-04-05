@@ -9,6 +9,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 * git
 * nodeJS 7.x
 * un IDE
+* Vue-CLI
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
