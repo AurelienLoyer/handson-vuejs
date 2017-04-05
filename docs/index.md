@@ -1,3 +1,5 @@
+https://slides.com/emmanueldemey-1/deck-13/edit
+
 # Exercice
 
 Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque VueJS.
