@@ -1,4 +1,4 @@
-https://slides.com/emmanueldemey-1/deck-13/edit
+http://slides.com/emmanueldemey-1/deck-13#/
 
 # Exercice
 
