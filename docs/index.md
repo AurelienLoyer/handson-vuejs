@@ -20,7 +20,13 @@ npm i -g vue-cli
 cd devoxx-vuejs
 vue init webpack .
 npm install vue-resource vue-router vee-validate vuex --save
+npm install
 ```
+Pour vérifier que tout marche correctement:
+``` 
+npm test
+```
+Tout devrait être vert !
 
 ## PW0
 
