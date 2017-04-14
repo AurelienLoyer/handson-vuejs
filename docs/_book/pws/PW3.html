@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PW3 - Les Directives · Introduction à VueJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PW4.html" />
+    
+    
+    <link rel="prev" href="PW2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="PW1.html">
+            
+                <a href="PW1.html">
+            
+                    
+                    PW1 - Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="PW2.html">
+            
+                <a href="PW2.html">
+            
+                    
+                    PW2 - Les Composants
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="PW3.html">
+            
+                <a href="PW3.html">
+            
+                    
+                    PW3 - Les Directives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="PW4.html">
+            
+                <a href="PW4.html">
+            
+                    
+                    PW4 - Les Filtres
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="PW5.html">
+            
+                <a href="PW5.html">
+            
+                    
+                    PW5 - Les Ressources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="PW6.html">
+            
+                <a href="PW6.html">
+            
+                    
+                    PW6 - Le Routeur
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="PW7.html">
+            
+                <a href="PW7.html">
+            
+                    
+                    PW7 - Les Formulaires
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="PW8.html">
+            
+                <a href="PW8.html">
+            
+                    
+                    PW8 - VueX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PW3 - Les Directives</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pw3---les-directives">PW3 - Les Directives</h2>
+<p>Dans ce TP, nous allons dynamiser notre page avec les directives <code>v-for</code>, <code>v-if</code> et <code>v-bind</code>.</p>
+<ul>
+<li><p>Gr&#xE2;ce &#xE0; la directive <code>v-for</code>, it&#xE9;rez sur la liste des bi&#xE8;res afin d&apos;afficher autant de composants <code>Beer.vue</code> qu&apos;il y a d&apos;&#xE9;l&#xE9;ments dans le tableau.</p>
+</li>
+<li><p>Dans notre tableau de <code>Beer</code>, ajoutez une propri&#xE9;t&#xE9; stock. Initiez cette propri&#xE9;t&#xE9; &#xE0; 5 pour tous les &#xE9;l&#xE9;m&#xE9;nts du tableau utilis&#xE9; par le composant principal.</p>
+</li>
+<li><p>Lorsque l&apos;utilisateur s&#xE9;lectionne un &#xE9;l&#xE9;ment, d&#xE9;cr&#xE9;mentez le stock associ&#xE9;.</p>
+</li>
+<li><p>Gr&#xE2;ce &#xE0; la directive <code>v-if</code>, affichez un produit, si et seulement si sa propri&#xE9;t&#xE9; stock est sup&#xE9;rieure &#xE0; 0.</p>
+</li>
+<li><p>Changez la couleur de fond d&apos;un produit si son stock atteint 1. Pour cela, utilisez la syntaxe <code>v-bind:class</code> sur l&apos;&#xE9;l&#xE9;ment ayant la classe <code>thumbnail</code>, ainsi que la classe suivante :</p>
+</li>
+</ul>
+<pre><code class="lang-css"><span class="hljs-selector-class">.last</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(255, 0, 0, 0.4)
+}
+</code></pre>
+<ul>
+<li>Dans le composant <code>menu</code>, dynamisez le lien redirigeant l&apos;utilisateur vers la page <code>basket</code> :<ul>
+<li>Si le panier est vide, affichez <code>Acc&#xE9;der &#xE0; votre panier (vide)</code></li>
+<li>Si il y a au moins 1 produit, affichez <code>Acc&#xE9;der &#xE0; votre panier (1 article(s) - 10&#x20AC;)</code></li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="PW2.html" class="navigation navigation-prev " aria-label="Previous page: PW2 - Les Composants">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PW4.html" class="navigation navigation-next " aria-label="Next page: PW4 - Les Filtres">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PW3 - Les Directives","level":"1.4","depth":1,"next":{"title":"PW4 - Les Filtres","level":"1.5","depth":1,"path":"pws/PW4.md","ref":"pws/PW4.md","articles":[]},"previous":{"title":"PW2 - Les Composants","level":"1.3","depth":1,"path":"pws/PW2.md","ref":"pws/PW2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW3.md","mtime":"2017-04-14T15:33:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:46:16.283Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
