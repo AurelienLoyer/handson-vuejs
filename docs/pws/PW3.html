@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PW1 - Getting Started · Introduction à VueJS</title>
+        <title>PW3 - Les Directives · Introduction à VueJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PW2.html" />
+    <link rel="next" href="PW4.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="PW2.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="PW1.html">
+        <li class="chapter " data-level="1.2" data-path="PW1.html">
             
                 <a href="PW1.html">
             
@@ -128,7 +128,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="PW3.html">
+        <li class="chapter active" data-level="1.4" data-path="PW3.html">
             
                 <a href="PW3.html">
             
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PW1 - Getting Started</a>
+        <a href=".." >PW3 - Les Directives</a>
     </h1>
 </div>
 
@@ -251,30 +251,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="pw1---getting-started">PW1 - Getting Started</h2>
-<p>Dans cette premi&#xE8;re partie pratique, nous allons juste int&#xE9;grer le template que nous vous mettons &#xE0; disposition dans une application <strong>VueJS</strong>.
-Pour cela nous allons nous servir de l&apos;utilitaire <strong>vue-cli</strong>.</p>
+                                <h2 id="pw3---les-directives">PW3 - Les Directives</h2>
+<p>Dans ce TP, nous allons dynamiser notre page avec les directives <code>v-for</code>, <code>v-if</code> et <code>v-bind</code>.</p>
 <ul>
-<li>Installez <strong>vue-cli</strong></li>
+<li><p>Gr&#xE2;ce &#xE0; la directive <code>v-for</code>, it&#xE9;rez sur la liste des bi&#xE8;res afin d&apos;afficher autant de composants <code>Beer.vue</code> qu&apos;il y a d&apos;&#xE9;l&#xE9;ments dans le tableau.</p>
+</li>
+<li><p>Dans notre tableau de <code>Beer</code>, ajoutez une propri&#xE9;t&#xE9; stock. Initiez cette propri&#xE9;t&#xE9; &#xE0; 5 pour tous les &#xE9;l&#xE9;m&#xE9;nts du tableau utilis&#xE9; par le composant principal.</p>
+</li>
+<li><p>Lorsque l&apos;utilisateur s&#xE9;lectionne un &#xE9;l&#xE9;ment, d&#xE9;cr&#xE9;mentez le stock associ&#xE9;.</p>
+</li>
+<li><p>Gr&#xE2;ce &#xE0; la directive <code>v-if</code>, affichez un produit, si et seulement si sa propri&#xE9;t&#xE9; stock est sup&#xE9;rieure &#xE0; 0.</p>
+</li>
+<li><p>Changez la couleur de fond d&apos;un produit si son stock atteint 1. Pour cela, utilisez la syntaxe <code>v-bind:class</code> sur l&apos;&#xE9;l&#xE9;ment ayant la classe <code>thumbnail</code>, ainsi que la classe suivante :</p>
+</li>
 </ul>
-<pre><code class="lang-shell">npm i -g vue-cli
+<pre><code class="lang-css"><span class="hljs-selector-class">.last</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(255, 0, 0, 0.4)
+}
 </code></pre>
 <ul>
-<li>Cr&#xE9;ez une application, utilisant le template <strong>webpack</strong> dans le dossier r&#xE9;cup&#xE9;r&#xE9;</li>
+<li>Dans le composant <code>menu</code>, dynamisez le lien redirigeant l&apos;utilisateur vers la page <code>basket</code> :<ul>
+<li>Si le panier est vide, affichez <code>Acc&#xE9;der &#xE0; votre panier (vide)</code></li>
+<li>Si il y a au moins 1 produit, affichez <code>Acc&#xE9;der &#xE0; votre panier (1 article(s) - 10&#x20AC;)</code></li>
 </ul>
-<pre><code class="lang-shell">vue init webpack .
-</code></pre>
-<p>Pour cette premi&#xE8;re &#xE9;tape, nous vous conseillons de le d&#xE9;sactiver <strong>eslint</strong> et le routeur lors de la g&#xE9;n&#xE9;ration de l&apos;application.</p>
-<ul>
-<li>Vous devez &#xE0; pr&#xE9;sent installer les d&#xE9;pendances avec <strong>NPM</strong> ou <strong>Yarn</strong></li>
+</li>
 </ul>
-<pre><code class="lang-shell">npm i
-</code></pre>
-<ul>
-<li>L&apos;application se lance avec la commande suivante :</li>
-</ul>
-<pre><code class="lang-shell">npm run dev
-</code></pre>
 
                                 
                                 </section>
@@ -302,12 +303,12 @@ Pour cela nous allons nous servir de l&apos;utilitaire <strong>vue-cli</strong>.
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="PW2.html" class="navigation navigation-prev " aria-label="Previous page: PW2 - Les Composants">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="PW2.html" class="navigation navigation-next " aria-label="Next page: PW2 - Les Composants">
+                <a href="PW4.html" class="navigation navigation-next " aria-label="Next page: PW4 - Les Filtres">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -318,7 +319,7 @@ Pour cela nous allons nous servir de l&apos;utilitaire <strong>vue-cli</strong>.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PW1 - Getting Started","level":"1.2","depth":1,"next":{"title":"PW2 - Les Composants","level":"1.3","depth":1,"path":"pws/PW2.md","ref":"pws/PW2.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW1.md","mtime":"2017-04-14T15:34:08.286Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:46:16.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PW3 - Les Directives","level":"1.4","depth":1,"next":{"title":"PW4 - Les Filtres","level":"1.5","depth":1,"path":"pws/PW4.md","ref":"pws/PW4.md","articles":[]},"previous":{"title":"PW2 - Les Composants","level":"1.3","depth":1,"path":"pws/PW2.md","ref":"pws/PW2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW3.md","mtime":"2017-04-14T15:33:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:52:10.308Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

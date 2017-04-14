@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PW8 - VueX · Introduction à VueJS</title>
+        <title>PW7 - Les Formulaires · Introduction à VueJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="PW8.html" />
     
-    <link rel="prev" href="PW7.html" />
+    
+    <link rel="prev" href="PW6.html" />
     
 
     </head>
@@ -178,7 +180,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="PW7.html">
+        <li class="chapter active" data-level="1.8" data-path="PW7.html">
             
                 <a href="PW7.html">
             
@@ -191,7 +193,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="PW8.html">
+        <li class="chapter " data-level="1.9" data-path="PW8.html">
             
                 <a href="PW8.html">
             
@@ -234,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PW8 - VueX</a>
+        <a href=".." >PW7 - Les Formulaires</a>
     </h1>
 </div>
 
@@ -249,20 +251,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="pw8---vuex">PW8 - VueX</h2>
-<p>Pour terminer ce codelab, nous allons int&#xE9;grer la biblioth&#xE8;que <strong>Vuex</strong> afin de g&#xE9;rer les &#xE9;tats de l&apos;application.</p>
+                                <h2 id="pw7---les-formulaires">PW7 - Les Formulaires</h2>
+<p>Dans ce PW, nous allons &#xE9;diter le formulaire dans le composant <code>basket</code> cr&#xE9;&#xE9; pr&#xE9;c&#xE9;demment.</p>
 <ul>
-<li><p>Installez le module <code>vuex</code></p>
+<li><p>Affichez le panier de l&apos;utilisateur avec le template <code>basket.html</code>.</p>
 </li>
-<li><p>Cr&#xE9;ez le store qui sera utilis&#xE9; dans l&apos;ensemble de l&apos;application. Dans le cadre de ce codelab nous n&apos;y manipulerons que le panier de l&apos;utilisateur.</p>
+<li><p>Dans le composant <code>basket</code>, cr&#xE9;ez un objet <code>customer</code> avec les propri&#xE9;t&#xE9;s <code>name</code>, <code>address</code> et <code>creditCard</code>.</p>
 </li>
-<li><p>Le <code>store</code> devra &#xEA;tre inject&#xE9; dans chaque composant de notre application.</p>
+<li><p>Associez &#xE0; chaque champs du formulaire la propri&#xE9;t&#xE9; de l&apos;objet cr&#xE9;&#xE9; pr&#xE9;c&#xE9;demment.</p>
 </li>
-<li><p>Lorsque l&apos;utilisateur selectionne une bi&#xE8;re, veuillez cr&#xE9;er une mutation permettant d&apos;ajouter la bi&#xE8;re selectionn&#xE9;e au panier.</p>
+<li><p>Lorsque le formulaire est valid&#xE9;, vous devez envoyer une requ&#xEA;te POST au serveur avec les informations de l&apos;utilisateur &#xE0; l&apos;URL <code>basket/confirm</code>.</p>
 </li>
-<li><p>Dans les composants <code>basket</code> et <code>menu</code>, utilisez le panier stock&#xE9; dans le <code>store</code> pour afficher les informations n&#xE9;cessaires.</p>
+<li><p>La requ&#xEA;te de confirmation ne peut &#xEA;tre ex&#xE9;cut&#xE9;e que si tous les champs ont &#xE9;t&#xE9; saisis. Dynamisez l&apos;ajout de la classe <code>has-error</code> en fonction de l&apos;&#xE9;tat de validation du formulaire.
+(Pour ce codelab, nous faisons ce traitement &#xE0; la main, mais nous pourrions utiliser des biblioth&#xE8;ques comme <code>vue-validate</code>).</p>
 </li>
-<li><p>Dans le composant principal, si la propri&#xE9;t&#xE9; stock&#xE9;e dans le <code>store</code> n&apos;est pas d&#xE9;finie, veuillez envoyer la requ&#xEA;te vers le serveur, afin de l&apos;initialiser.</p>
+<li><p>Si la requ&#xEA;te de confirmation s&apos;ex&#xE9;cute avec succ&#xE8;s, redirigez l&apos;utilisateur vers la page principale.</p>
 </li>
 </ul>
 
@@ -292,10 +295,14 @@
 
             
                 
-                <a href="PW7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: PW7 - Les Formulaires">
+                <a href="PW6.html" class="navigation navigation-prev " aria-label="Previous page: PW6 - Le Routeur">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="PW8.html" class="navigation navigation-next " aria-label="Next page: PW8 - VueX">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -304,7 +311,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PW8 - VueX","level":"1.9","depth":1,"previous":{"title":"PW7 - Les Formulaires","level":"1.8","depth":1,"path":"pws/PW7.md","ref":"pws/PW7.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW8.md","mtime":"2017-04-14T15:33:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:46:16.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PW7 - Les Formulaires","level":"1.8","depth":1,"next":{"title":"PW8 - VueX","level":"1.9","depth":1,"path":"pws/PW8.md","ref":"pws/PW8.md","articles":[]},"previous":{"title":"PW6 - Le Routeur","level":"1.7","depth":1,"path":"pws/PW6.md","ref":"pws/PW6.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW7.md","mtime":"2017-04-14T15:33:07.322Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:52:10.308Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

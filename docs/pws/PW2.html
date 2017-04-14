@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PW7 - Les Formulaires · Introduction à VueJS</title>
+        <title>PW2 - Les Composants · Introduction à VueJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="PW8.html" />
+    <link rel="next" href="PW3.html" />
     
     
-    <link rel="prev" href="PW6.html" />
+    <link rel="prev" href="PW1.html" />
     
 
     </head>
@@ -115,7 +115,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="PW2.html">
+        <li class="chapter active" data-level="1.3" data-path="PW2.html">
             
                 <a href="PW2.html">
             
@@ -180,7 +180,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="PW7.html">
+        <li class="chapter " data-level="1.8" data-path="PW7.html">
             
                 <a href="PW7.html">
             
@@ -236,7 +236,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PW7 - Les Formulaires</a>
+        <a href=".." >PW2 - Les Composants</a>
     </h1>
 </div>
 
@@ -251,21 +251,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="pw7---les-formulaires">PW7 - Les Formulaires</h2>
-<p>Dans ce PW, nous allons &#xE9;diter le formulaire dans le composant <code>basket</code> cr&#xE9;&#xE9; pr&#xE9;c&#xE9;demment.</p>
+                                <h2 id="pw2---les-composants">PW2 - Les Composants</h2>
 <ul>
-<li><p>Affichez le panier de l&apos;utilisateur avec le template <code>basket.html</code>.</p>
+<li>Vous &#xEA;tes &#xE0; pr&#xE9;sent pr&#xEA;t pour int&#xE9;grer le template dans l&apos;application qui vient d&apos;&#xEA;tre g&#xE9;n&#xE9;r&#xE9;e. Nous allons nous limiter pour l&apos;instant &#xE0; la page <code>home.html</code>. Voici les pr&#xE9;requis :<ul>
+<li>les &#xE9;l&#xE9;ments &#xE0; l&apos;ext&#xE9;rieur de <code>&lt;body&gt;</code> doivent se trouver dans le fichier <code>index.html</code></li>
+<li>le contenu de <code>&lt;body&gt;</code> doit &#xEA;tre ins&#xE9;r&#xE9; dans le composant <code>App.vue</code></li>
+</ul>
 </li>
-<li><p>Dans le composant <code>basket</code>, cr&#xE9;ez un objet <code>customer</code> avec les propri&#xE9;t&#xE9;s <code>name</code>, <code>address</code> et <code>creditCard</code>.</p>
+</ul>
+<p>Nous allons &#xE0; pr&#xE9;sent cr&#xE9;er nos premiers composants. Le premier sera utilis&#xE9; pour afficher le <strong>header</strong> et le second pour le bloc sp&#xE9;cifique &#xE0; une bi&#xE8;re.</p>
+<ul>
+<li><p>Cr&#xE9;ez un nouveau composant <code>menu.vue</code> dans lequel vous allez impl&#xE9;menter le menu principal de l&apos;application. Ce composant poss&#xE8;dera un param&#xE8;tre, un tableau de produits (le panier de l&apos;utilisateur). Ce tableau sera utilis&#xE9; pour calculer le prix total du panier.</p>
 </li>
-<li><p>Associez &#xE0; chaque champs du formulaire la propri&#xE9;t&#xE9; de l&apos;objet cr&#xE9;&#xE9; pr&#xE9;c&#xE9;demment.</p>
+<li><p>Remplacez dans le composant principal le menu initial par le composant que vous venez de cr&#xE9;er.</p>
 </li>
-<li><p>Lorsque le formulaire est valid&#xE9;, vous devez envoyer une requ&#xEA;te POST au serveur avec les informations de l&apos;utilisateur &#xE0; l&apos;URL <code>basket/confirm</code>.</p>
+<li><p>Dans le composant principal, instanciez un nouveau tableau d&apos;objets, correspondant aux items que nous d&#xE9;sirons afficher. Vous pouvez r&#xE9;cup&#xE9;rer le contenu du fichier <code>server/beers.json</code></p>
 </li>
-<li><p>La requ&#xEA;te de confirmation ne peut &#xEA;tre ex&#xE9;cut&#xE9;e que si tous les champs ont &#xE9;t&#xE9; saisis. Dynamisez l&apos;ajout de la classe <code>has-error</code> en fonction de l&apos;&#xE9;tat de validation du formulaire.
-(Pour ce codelab, nous faisons ce traitement &#xE0; la main, mais nous pourrions utiliser des biblioth&#xE8;ques comme <code>vue-validate</code>).</p>
+<li><p>Nous allons &#xE0; pr&#xE9;sent cr&#xE9;er un composant <code>Beer.vue</code> qui sera en charge d&apos;afficher le d&#xE9;tail d&apos;un &#xE9;l&#xE9;ment du tableau pr&#xE9;c&#xE9;dement cr&#xE9;&#xE9;. Voici les pr&#xE9;requis pour ce composant :</p>
+<ul>
+<li>Il utilisera le template pour l&apos;instant pr&#xE9;sent dans le composant principal</li>
+<li>Il poss&#xE8;dera un param&#xE8;tre, correspondant &#xE0; l&apos;&#xE9;l&#xE9;ment &#xE0; afficher</li>
+<li>Il &#xE9;mettra un &#xE9;v&#xE9;nement lorsque nous cliquons sur le bouton</li>
+</ul>
 </li>
-<li><p>Si la requ&#xEA;te de confirmation s&apos;ex&#xE9;cute avec succ&#xE8;s, redirigez l&apos;utilisateur vers la page principale.</p>
+<li><p>Lorsque le composant principal re&#xE7;oit cet &#xE9;v&#xE9;nement, il devra mettre &#xE0; jour le panier de l&apos;utilisateur (utilis&#xE9; pr&#xE9;c&#xE9;demment lors de l&apos;utilisation du composant <code>menu.vue</code>).</p>
 </li>
 </ul>
 
@@ -295,12 +304,12 @@
 
             
                 
-                <a href="PW6.html" class="navigation navigation-prev " aria-label="Previous page: PW6 - Le Routeur">
+                <a href="PW1.html" class="navigation navigation-prev " aria-label="Previous page: PW1 - Getting Started">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="PW8.html" class="navigation navigation-next " aria-label="Next page: PW8 - VueX">
+                <a href="PW3.html" class="navigation navigation-next " aria-label="Next page: PW3 - Les Directives">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -311,7 +320,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PW7 - Les Formulaires","level":"1.8","depth":1,"next":{"title":"PW8 - VueX","level":"1.9","depth":1,"path":"pws/PW8.md","ref":"pws/PW8.md","articles":[]},"previous":{"title":"PW6 - Le Routeur","level":"1.7","depth":1,"path":"pws/PW6.md","ref":"pws/PW6.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW7.md","mtime":"2017-04-14T15:33:07.322Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:46:16.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PW2 - Les Composants","level":"1.3","depth":1,"next":{"title":"PW3 - Les Directives","level":"1.4","depth":1,"path":"pws/PW3.md","ref":"pws/PW3.md","articles":[]},"previous":{"title":"PW1 - Getting Started","level":"1.2","depth":1,"path":"pws/PW1.md","ref":"pws/PW1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW2.md","mtime":"2017-04-14T15:34:00.654Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T15:52:10.308Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

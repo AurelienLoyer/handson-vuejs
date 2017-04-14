@@ -4,7 +4,7 @@
   "description": "http://slides.com/emmanueldemey-1/deck-13#/ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque VueJS.",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf docs && mkdir docs && ./node_modules/.bin/gitbook build && mv _book docs"
+    "build": "rimraf docs && ./node_modules/.bin/gitbook build && mv _book/ docs"
   },
   "repository": {
     "type": "git",
