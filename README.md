@@ -7,9 +7,9 @@ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec 
 
 Pour faire ce codelab, vous avez besoin des outils suivants :
 
-* git
-* nodeJS 7.x
-* un IDE
+* GIT
+* NodeJS 7.x
+* un IDE (WebStorm ou Visual Studio Code)
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
