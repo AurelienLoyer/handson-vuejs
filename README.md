@@ -20,7 +20,7 @@ git clone -b step1 https://github.com/Gillespie59/devoxx-vuejs
 npm i -g vue-cli
 cd devoxx-vuejs
 vue init webpack .
-npm install vue-resource vue-router vee-validate vuex --save
+npm install axios vue-router vee-validate vuex --save
 npm install
 ```
 Pour vérifier que tout marche correctement:

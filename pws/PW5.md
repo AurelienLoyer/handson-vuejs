@@ -17,17 +17,17 @@ Cette API propose plusieurs points d'entrée :
 - `GET` sur `/basket`  retournera le panier de l'utilisateur
 - `POST` sur `/basket` pour ajouter une nouvelle bière au panier de l'utilisateur
 
-Pour consommer cette API nous allons utiliser `vue-ressource` :
+Pour consommer cette API nous allons utiliser `axios` :
 
 ```shell
-npm install vue-resource --save
+npm install axios --save
 ```
 
 * N'oubliez pas d'ajouter vue-resource dans votre application vuejs (fichier main.js)
 
-```js
-import VueResource from 'vue-resource'
-Vue.use(VueResource)
+```javascript
+import axios from 'axios';
+Vue.prototype.$http = axios;
 ```
 
 Dans le composant principal :
