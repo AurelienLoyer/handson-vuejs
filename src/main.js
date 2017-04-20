@@ -2,11 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import VueResource from 'vue-resource'
 import Router from './Router'
 import './filters/index'
+import axios from 'axios'
 
-Vue.use(VueResource)
+Vue.prototype.$http = axios
 
 /* eslint-disable no-new */
 new Vue({

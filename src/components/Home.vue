@@ -54,12 +54,12 @@ export default {
   methods: {
     getPanier: function () {
       this.$http.get(this.apiurl + '/basket').then(response => {
-        this.panier = response.body
+        this.panier = response.data
       })
     },
     getProduis: function () {
       this.$http.get(this.apiurl + '/beers').then(response => {
-        this.produits = response.body
+        this.produits = response.data
       })
     },
     ajoutPanier: function (biere) {
