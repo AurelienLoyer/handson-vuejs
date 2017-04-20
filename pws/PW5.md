@@ -6,7 +6,7 @@ Pour lancer le serveur, vous devez exécuter la commande suivante :
 ```shell
 cd server
 npm install
-node server.js
+npm start
 ```
 
 Le serveur sera disponible via l'URL `http://localhost:1337/api/v1`.
@@ -35,4 +35,6 @@ Dans le composant principal :
 * Récupérez la liste des bières à afficher. Le tableau JavaScript que nous avions défini pourra
 à présent être remplacé.
 
-* Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier)
+* Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier).
+
+* Ajoutez lorsque l'utilisateur sélectionne une bière, veuillez l'ajouter au panier.
