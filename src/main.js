@@ -2,14 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import VueResource from 'vue-resource'
 import Router from './Router'
 import Vuex from 'vuex'
 import VeeValidate from 'vee-validate'
 import './filters/index'
+import axios from 'axios'
+
+Vue.prototype.$http = axios
 
 Vue.use(Vuex)
-Vue.use(VueResource)
 Vue.use(VeeValidate)
 
 const store = new Vuex.Store({

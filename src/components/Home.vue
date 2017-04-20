@@ -52,12 +52,12 @@ export default {
   methods: {
     getPanier: function () {
       this.$http.get(this.apiurl + '/basket').then(response => {
-        this.$store.commit('createPanier', response.body)
+        this.$store.commit('createPanier', response.data)
       })
     },
     getProduis: function () {
       this.$http.get(this.apiurl + '/beers').then(response => {
-        this.produits = response.body
+        this.produits = response.data
       })
     },
     ajoutPanier: function (biere) {
