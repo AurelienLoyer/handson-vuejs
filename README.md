@@ -23,7 +23,6 @@ cd handson-vuejs
 vue init webpack .
 npm install axios vue-router vee-validate vuex --save
 npm install
-
 ```
 Pour vérifier que tout marche correctement:
 ```

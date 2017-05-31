@@ -3,4 +3,5 @@ bower_components
 dist
 bespoke-theme-*
 
+docs/npm-debug.log
 pw.md
