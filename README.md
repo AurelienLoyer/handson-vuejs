@@ -1,8 +1,9 @@
 # Introduction
 
-http://slides.com/t3kstiil3/deck-13
-https://slides.com/t3kstiil3/deck-13/live
-Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque VueJS.
+Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque VueJS. 
+
+* http://slides.com/t3kstiil3/deck-13
+* https://slides.com/t3kstiil3/deck-13/live
 
 ## Prérequis
 
@@ -40,3 +41,7 @@ Pour récupérer ces templates, veuillez exécuter la commande suivante :
 ```shell
 git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
 ```
+
+## Exercices 
+
+http://aurelien-loyer.fr/handson-vuejs/
