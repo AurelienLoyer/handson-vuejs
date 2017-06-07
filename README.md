@@ -31,7 +31,7 @@ npm test
 ```
 Tout devrait être vert !
 
-## Par où commencer ?
+##  
 
 Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.
 Le but sera d'intégrer ces pages dans une application VueJS.
