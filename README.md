@@ -36,12 +36,6 @@ Tout devrait être vert !
 Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.
 Le but sera d'intégrer ces pages dans une application VueJS.
 
-Pour récupérer ces templates, veuillez exécuter la commande suivante :
-
-```shell
-git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
-```
-
 ## Exercices 
 
 http://aurelien-loyer.fr/handson-vuejs/
