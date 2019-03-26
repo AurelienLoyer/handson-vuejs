@@ -1,6 +1,6 @@
 ## PW4 - Les Filtres
 
-!!!! plus de filtre dans vuejs 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
+!!!! ⚠️ plus de filtre dans vue.js 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
 https://vuejs.org/v2/guide/syntax.html#Filters
 
 Nous allons à présent créer des filtres, afin de formater le contenu de notre application.

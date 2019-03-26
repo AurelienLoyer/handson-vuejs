@@ -7,7 +7,7 @@
         <title>PW5 - Les Ressources · Introduction à VueJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -265,19 +265,19 @@ npm start
 <li><code>GET</code> sur <code>/basket</code>  retournera le panier de l&apos;utilisateur</li>
 <li><code>POST</code> sur <code>/basket</code> pour ajouter une nouvelle bi&#xE8;re au panier de l&apos;utilisateur</li>
 </ul>
+<p>vue-resource -&gt; axiox <a href="https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4" target="_blank">https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4</a></p>
 <p>Pour consommer cette API nous allons utiliser <code>axios</code> :</p>
 <pre><code class="lang-shell">npm install axios --save
 </code></pre>
 <ul>
-<li>N&apos;oubliez pas d&apos;ajouter vue-resource dans votre application vuejs (fichier main.js)</li>
+<li>N&apos;oubliez pas d&apos;ajouter axios dans votre application vuejs (fichier main.js)</li>
 </ul>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
 Vue.prototype.$http = axios;
 </code></pre>
 <p>Dans le composant principal :</p>
 <ul>
-<li><p>R&#xE9;cup&#xE9;rez la liste des bi&#xE8;res &#xE0; afficher. Le tableau JavaScript que nous avions d&#xE9;fini pourra
-&#xE0; pr&#xE9;sent &#xEA;tre remplac&#xE9;.</p>
+<li><p>R&#xE9;cup&#xE9;rez la liste des bi&#xE8;res &#xE0; afficher. Le tableau JavaScript que nous avions d&#xE9;fini pourra &#xE0; pr&#xE9;sent &#xEA;tre remplac&#xE9;.</p>
 </li>
 <li><p>R&#xE9;cup&#xE9;rez le panier de l&apos;utilisateur. Ce panier sera pass&#xE9; en param&#xE8;tre du composant <code>menu</code> afin d&apos;afficher les informations associ&#xE9;es (nombre d&apos;&#xE9;l&#xE9;ment, montant du panier).</p>
 </li>
@@ -327,7 +327,7 @@ Vue.prototype.$http = axios;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PW5 - Les Ressources","level":"1.6","depth":1,"next":{"title":"PW6 - Le Routeur","level":"1.7","depth":1,"path":"pws/PW6.md","ref":"pws/PW6.md","articles":[]},"previous":{"title":"PW4 - Les Filtres","level":"1.5","depth":1,"path":"pws/PW4.md","ref":"pws/PW4.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW5.md","mtime":"2017-05-31T20:34:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-31T23:18:30.430Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PW5 - Les Ressources","level":"1.6","depth":1,"next":{"title":"PW6 - Le Routeur","level":"1.7","depth":1,"path":"pws/PW6.md","ref":"pws/PW6.md","articles":[]},"previous":{"title":"PW4 - Les Filtres","level":"1.5","depth":1,"path":"pws/PW4.md","ref":"pws/PW4.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"pws/PW5.md","mtime":"2019-03-26T18:32:55.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-26T18:35:48.599Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

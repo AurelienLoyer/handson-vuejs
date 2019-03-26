@@ -1,22 +1,22 @@
 {
-  "name": "devoxx-vuejs",
+  "name": "handon-vuejs",
   "version": "1.0.0",
-  "description": "http://slides.com/emmanueldemey-1/deck-13#/ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque VueJS.",
+  "description": "http://slides.com/aurelienloyer/handson-vuejs#/ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque Vue.js.",
   "main": "index.js",
   "scripts": {
     "build": "rimraf docs && ./node_modules/.bin/gitbook build && mv _book/ docs"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Gillespie59/devoxx-vuejs.git"
+    "url": "git://github.com/T3kstiil3/handson-vuejs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Gillespie59/devoxx-vuejs/issues"
+    "url": "https://github.com/T3kstiil3/handson-vuejs/issues"
   },
-  "homepage": "https://github.com/Gillespie59/devoxx-vuejs#readme",
+  "homepage": "https://github.com/T3kstiil3/handson-vuejs#readme",
   "devDependencies": {
     "gitbook-cli": "2.3.0",
     "rimraf": "2.6.1"
