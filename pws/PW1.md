@@ -1,14 +1,3 @@
-author: Loyer Aurelien
-summary: Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque Vue.js.
-id: docs
-
-# Codelab Vue.js
-
-Prérequis:
-
-- NPM / Node
-- Un compte Google
-
 ## PW1 - Getting Started
 
 Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposition dans une application **VueJS**.

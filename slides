@@ -7,10 +7,10 @@ function setup() {
 }
 
 function build() {
-    cat ./pws/PW1.md ./pws/PW2.md ./pws/PW3.md ./pws/PW4.md ./pws/PW5.md ./pws/PW6.md ./pws/PW7.md ./pws/PW8.md > ./.tmp/index.md
+    cat ./pws/PW0.md ./pws/PW1.md ./pws/PW2.md ./pws/PW3.md ./pws/PW4.md ./pws/PW5.md ./pws/PW6.md ./pws/PW7.md ./pws/PW8.md ./pws/PW99.md > ./.tmp/index.md
     claat export ./.tmp/index.md
     pushd docs
-    claat
+    claat install
     popd
 }
 
@@ -19,7 +19,7 @@ function clean() {
 }
 
 function main() {
-  setup && build
+  setup && build && clean
 }
 
 main
