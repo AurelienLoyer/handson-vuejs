@@ -21,3 +21,4 @@ Dans ce TP, nous allons dynamiser notre page avec les directives `v-for`, `v-if`
 * Dans le composant `menu`, dynamisez le lien redirigeant l'utilisateur vers la page `basket` :
     * Si le panier est vide, affichez `Accéder à votre panier (vide)`
     * Si il y a au moins 1 produit, affichez `Accéder à votre panier (1 article(s) - 10€)`
+

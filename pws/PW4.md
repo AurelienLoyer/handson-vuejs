@@ -1,6 +1,6 @@
 ## PW4 - Les Filtres
 
-!!!! ⚠️ plus de filtre dans vue.js 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
+⚠️ plus de filtre dans vue.js 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
 https://vuejs.org/v2/guide/syntax.html#Filters
 
 Nous allons à présent créer des filtres, afin de formater le contenu de notre application.
@@ -10,3 +10,4 @@ Nous allons à présent créer des filtres, afin de formater le contenu de notre
 * Créez le filtre `currency` pour ajouter le sigle `€` au prix de chaque bière.
 
 * Nous allons terminer cette partie pratique par le développement d'une `Computed Property`. Itérer la directive `v-for` avec cette `Computed Property` afin de trier les éléments par la propriété `price`.
+

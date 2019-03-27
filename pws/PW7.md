@@ -14,3 +14,4 @@ Dans ce PW, nous allons éditer le formulaire dans le composant `basket` créé 
 (Pour ce codelab, nous faisons ce traitement à la main, mais nous pourrions utiliser des bibliothèques comme `vue-validate`).
 
 - Si la requête de confirmation s'exécute avec succès, redirigez l'utilisateur vers la page principale.
+

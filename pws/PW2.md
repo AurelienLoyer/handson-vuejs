@@ -18,3 +18,4 @@ Nous allons à présent créer nos premiers composants. Le premier sera utilisé
     * Il émettra un événement lorsque nous cliquons sur le bouton
 
 * Lorsque le composant principal reçoit cet événement, il devra mettre à jour le panier de l'utilisateur (utilisé précédemment lors de l'utilisation du composant `menu.vue`).
+

@@ -1,0 +1,17 @@
+{
+  "environment": "web",
+  "source": "./.tmp/index.md",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-03-26T22:57:17-04:00",
+  "id": "docs",
+  "duration": 0,
+  "title": "Codelab Vue.js",
+  "summary": "Pendant ce codelab, nous allons créer une petite application d’E-Commerce avec la bibliothèque Vue.js.",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "docs"
+}

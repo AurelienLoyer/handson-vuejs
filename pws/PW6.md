@@ -13,3 +13,4 @@ Nous allons à présent intégrer dans notre application le routeur proposé par
 * Dans le template du composant `App`, indiquez le point d'insertion des différentes pages de l'application à l'aide de la directive `router-view`.
 
 * Ajoutez le composant `router-link` dans le composant `menu` afin de rediriger l'utilisateur vers les deux composants que nous venons de créer.
+

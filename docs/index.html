@@ -1,360 +1,201 @@
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · Introduction à VueJS</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="gitbook/style.css">
+<!doctype html>
 
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Codelab Vue.js</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="docs"
+                  title="Codelab Vue.js"
+                  environment="web"
+                  feedback-link="">
     
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="pws/PW1.html" />
-    
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter active" data-level="1.1" data-path="./">
-            
-                <a href="./">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="pws/PW1.html">
-            
-                <a href="pws/PW1.html">
-            
-                    
-                    PW1 - Getting Started
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="pws/PW2.html">
-            
-                <a href="pws/PW2.html">
-            
-                    
-                    PW2 - Les Composants
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="pws/PW3.html">
-            
-                <a href="pws/PW3.html">
-            
-                    
-                    PW3 - Les Directives
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="pws/PW4.html">
-            
-                <a href="pws/PW4.html">
-            
-                    
-                    PW4 - Les Filtres
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" data-path="pws/PW5.html">
-            
-                <a href="pws/PW5.html">
-            
-                    
-                    PW5 - Les Ressources
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7" data-path="pws/PW6.html">
-            
-                <a href="pws/PW6.html">
-            
-                    
-                    PW6 - Le Routeur
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8" data-path="pws/PW7.html">
-            
-                <a href="pws/PW7.html">
-            
-                    
-                    PW7 - Les Formulaires
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9" data-path="pws/PW8.html">
-            
-                <a href="pws/PW8.html">
-            
-                    
-                    PW8 - VueX
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="introduction">Introduction</h1>
-<p>Pendant ce codelab, nous allons cr&#xE9;er une petite application d&apos;E-Commerce avec la biblioth&#xE8;que VueJS. </p>
+      <google-codelab-step label="PW1 - Getting Started" duration="0">
+        <p>Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposition dans une application <strong>VueJS</strong>.<br>Pour cela nous allons nous servir de l&#39;utilitaire <strong>vue-cli</strong>.</p>
 <ul>
-<li><a href="http://slides.com/t3kstiil3/deck-13" target="_blank">http://slides.com/t3kstiil3/deck-13</a></li>
-<li><a href="https://slides.com/t3kstiil3/deck-13/live" target="_blank">https://slides.com/t3kstiil3/deck-13/live</a></li>
+<li>Installez <strong>vue-cli</strong><pre><code>npm install -g @vue/cli
+</code></pre>
+</li>
+<li>Créez une application, utilisant le template <strong>webpack</strong> dans le dossier récupéré<pre><code>vue create .
+</code></pre>
+</li>
 </ul>
-<h2 id="pr&#xE9;requis">Pr&#xE9;requis</h2>
-<p>Pour faire ce codelab, vous avez besoin des outils suivants :</p>
+<p>Pour cette première étape, nous vous conseillons de désactiver <strong>eslint</strong> et le routeur lors de la génération de l&#39;application. (ne pas faire en production ⚠️ 😉)</p>
 <ul>
-<li>GIT</li>
-<li>NodeJS 7.x</li>
-<li>un IDE (WebStorm ou Visual Studio Code...)</li>
+<li>Vous devez à présent installer les dépendances avec <strong>NPM</strong> ou <strong>Yarn</strong><pre><code>npm i 
+</code></pre>
+</li>
+<li>L&#39;application se lance avec la commande suivante :<pre><code>npm run dev
+</code></pre>
+</li>
+<li>Vue CLI 3 arrive avec une nouvelle interface UI, pour la tester :<pre><code>vue ui
+</code></pre>
+</li>
 </ul>
-<p>Pour aider au d&#xE9;veloppement, vous pouvez utiliser l&apos;extention Chrome <strong>Vue-devtools</strong> (<a href="https://github.com/vuejs/vue-devtools" target="_blank">https://github.com/vuejs/vue-devtools</a>)</p>
-<p>Afin d&apos;&#xE9;viter les probl&#xE8;mes de r&#xE9;seau le jour J, veuillez cloner ce projet et ex&#xE9;cuter les commandes suivantes :</p>
-<pre><code class="lang-shell">git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
 
-npm install -g @vue/cli
-# OR
-yarn global add @vue/cli
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW2 - Les Composants" duration="0">
+        <ul>
+<li>Vous êtes à présent prêt pour intégrer le template dans l&#39;application qui vient d&#39;être générée. Nous allons nous limiter pour l&#39;instant à la page <code>home.html</code>. Voici les prérequis :<br><br><ul>
+<li>les éléments à l&#39;extérieur de <code>&lt;body&gt;</code> doivent se trouver dans le fichier <code>index.html</code></li>
+<li>le contenu de <code>&lt;body&gt;</code> doit être inséré dans le composant <code>App.vue</code></li>
+</ul>
+</li>
+</ul>
+<p>Nous allons à présent créer nos premiers composants. Le premier sera utilisé pour afficher le <strong>header</strong> et le second pour le bloc spécifique à une bière.</p>
+<ul>
+<li>Créez un nouveau composant <code>menu.vue</code> dans lequel vous allez implémenter le menu principal de l&#39;application. Ce composant possèdera un paramètre, un tableau de produits (le panier de l&#39;utilisateur). Ce tableau sera utilisé pour calculer le prix total du panier.</li>
+<li>Remplacez dans le composant principal le menu initial par le composant que vous venez de créer.</li>
+<li>Dans le composant principal, instanciez un nouveau tableau d&#39;objets, correspondant aux items que nous désirons afficher. Vous pouvez récupérer le contenu du fichier <code>server/beers.json</code></li>
+<li>Nous allons à présent créer un composant <code>Beer.vue</code> qui sera en charge d&#39;afficher le détail d&#39;un élément du tableau précédement créé. Voici les prérequis pour ce composant :<ul>
+<li>Il utilisera le template pour l&#39;instant présent dans le composant principal</li>
+<li>Il possèdera un paramètre, correspondant à l&#39;élément à afficher</li>
+<li>Il émettra un événement lorsque nous cliquons sur le bouton</li>
+</ul>
+</li>
+<li>Lorsque le composant principal reçoit cet événement, il devra mettre à jour le panier de l&#39;utilisateur (utilisé précédemment lors de l&#39;utilisation du composant <code>menu.vue</code>).</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW3 - Les Directives" duration="0">
+        <p>Dans ce TP, nous allons dynamiser notre page avec les directives <code>v-for</code>, <code>v-if</code> et <code>v-bind</code>.</p>
+<ul>
+<li>Grâce à la directive <code>v-for</code>, itérez sur la liste des bières afin d&#39;afficher autant de composants <code>Beer.vue</code> qu&#39;il y a d&#39;éléments dans le tableau.</li>
+<li>Dans notre tableau de <code>Beer</code>, ajoutez une propriété stock. Initiez cette propriété à 5 pour tous les éléménts du tableau utilisé par le composant principal.</li>
+<li>Lorsque l&#39;utilisateur sélectionne un élément, décrémentez le stock associé.</li>
+<li>Grâce à la directive <code>v-if</code>, affichez un produit, si et seulement si sa propriété stock est supérieure à 0.</li>
+<li>Changez la couleur de fond d&#39;un produit si son stock atteint 1. Pour cela, utilisez la syntaxe <code>v-bind:class</code> sur l&#39;élément ayant la classe <code>thumbnail</code>, ainsi que la classe suivante :<pre><code>.last {
+background-color: rgba(255, 0, 0, 0.4)
+}
 </code></pre>
-<p>Pour v&#xE9;rifier que tout marche correctement:</p>
-<pre><code>vue --version
-vue --help
-</code></pre><p>Vous devriez avoir une version &gt; 3.* et une liste de command pour commencer votre projet.</p>
-<h2 id=""> </h2>
-<p>Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons d&#xE9;velopp&#xE9;es.
-Le but sera d&apos;int&#xE9;grer ces pages dans une application VueJS.</p>
-<p>Pour r&#xE9;cup&#xE9;rer ces templates, veuillez ex&#xE9;cuter la commande suivante :</p>
-<pre><code class="lang-shell">git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
+</li>
+<li>Dans le composant <code>menu</code>, dynamisez le lien redirigeant l&#39;utilisateur vers la page <code>basket</code> :<ul>
+<li>Si le panier est vide, affichez <code>Accéder à votre panier (vide)</code></li>
+<li>Si il y a au moins 1 produit, affichez <code>Accéder à votre panier (1 article(s) - 10€)</code></li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW4 - Les Filtres" duration="0">
+        <p>⚠️ plus de filtre dans vue.js 2 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966<br>https://vuejs.org/v2/guide/syntax.html#Filters</p>
+<p>Nous allons à présent créer des filtres, afin de formater le contenu de notre application.</p>
+<ul>
+<li>Créez le filtre <code>uppercase</code> pour écrire en majuscules le nom des bières</li>
+<li>Créez le filtre <code>currency</code> pour ajouter le sigle <code>�</code>�� au prix de chaque bière.</li>
+<li>Nous allons terminer cette partie pratique par le développement d&#39;une <code>Computed Property</code>. Itérer la directive <code>v-for</code> avec cette <code>Computed Property</code> afin de trier les éléments par la propriété <code>price</code>.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW5 - Les Ressources" duration="0">
+        <p>Nous allons à présent intégrer à notre application une API REST.<br>Pour lancer le serveur, vous devez exécuter la commande suivante :</p>
+<pre><code>cd server
+npm install
+npm start
 </code></pre>
-<h2 id="exercices">Exercices</h2>
-<p><a href="http://aurelien-loyer.fr/handson-vuejs/" target="_blank">http://aurelien-loyer.fr/handson-vuejs/</a></p>
+<p>Le serveur sera disponible via l&#39;URL <code>http://localhost:1337/api/v1</code>.</p>
+<p>Cette API propose plusieurs points d&#39;entrée :</p>
+<ul>
+<li><code>GET</code> sur <code>/beers</code> retournera la liste des bières</li>
+<li><code>GET</code> sur <code>/basket</code>  retournera le panier de l&#39;utilisateur</li>
+<li><code>POST</code> sur <code>/basket</code> pour ajouter une nouvelle bière au panier de l&#39;utilisateur</li>
+</ul>
+<p>vue-resource -&gt; axiox https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4</p>
+<p>Pour consommer cette API nous allons utiliser <code>axios</code> :</p>
+<pre><code>npm install axios --save
+</code></pre>
+<ul>
+<li>N&#39;oubliez pas d&#39;ajouter axios dans votre application vuejs (fichier main.js)<pre><code>import axios from &#39;axios&#39;;
+Vue.prototype.$http = axios;
+</code></pre>
+</li>
+</ul>
+<p>Dans le composant principal :</p>
+<ul>
+<li>Récupérez la liste des bières à afficher. Le tableau JavaScript que nous avions défini pourra à présent être remplacé.</li>
+<li>Récupérez le panier de l&#39;utilisateur. Ce panier sera passé en paramètre du composant <code>menu</code> afin d&#39;afficher les informations associées (nombre d&#39;élément, montant du panier).</li>
+<li>Ajoutez lorsque l&#39;utilisateur sélectionne une bière, veuillez l&#39;ajouter au panier.</li>
+</ul>
 
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
 
-                        </div>
-                    </div>
-                
-            </div>
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW6 - Le Routeur" duration="0">
+        <p>Nous allons à présent intégrer dans notre application le routeur proposé par la communauté <strong>VueJS</strong></p>
+<ul>
+<li>Installez le module <code>vue-router</code></li>
+<li>Créez deux composants : <code>home</code> et <code>basket</code><ul>
+<li>le composant <code>home</code> aura la charge d&#39;afficher le contenu de la page que nous avons implémenté dans les PWs précédents</li>
+<li>le composant <code>basket</code> qui doit afficher, pour l&#39;instant, le contenu du panier de l&#39;utilisateur au format json</li>
+</ul>
+</li>
+<li>Ajoutez à votre application la configuration nécessaire pour le fonctionnement du routeur.</li>
+<li>Dans le template du composant <code>App</code>, indiquez le point d&#39;insertion des différentes pages de l&#39;application à l&#39;aide de la directive <code>router-view</code>.</li>
+<li>Ajoutez le composant <code>router-link</code> dans le composant <code>menu</code> afin de rediriger l&#39;utilisateur vers les deux composants que nous venons de créer.</li>
+</ul>
 
-            
-                
-                
-                <a href="pws/PW1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: PW1 - Getting Started">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"PW1 - Getting Started","level":"1.2","depth":1,"path":"pws/PW1.md","ref":"pws/PW1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introduction à VueJS","gitbook":"*"},"file":{"path":"README.md","mtime":"2019-03-26T18:24:28.668Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-26T18:35:48.599Z"},"basePath":".","book":{"language":""}});
-        });
-    </script>
-</div>
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW7 - Les Formulaires" duration="0">
+        <p>Dans ce PW, nous allons éditer le formulaire dans le composant <code>basket</code> créé précédemment.</p>
+<ul>
+<li>Affichez le panier de l&#39;utilisateur avec le template <code>basket.html</code>.</li>
+<li>Dans le composant <code>basket</code>, créez un objet <code>customer</code> avec les propriétés <code>name</code>, <code>address</code> et <code>creditCard</code>.</li>
+<li>Associez à chaque champs du formulaire la propriété de l&#39;objet créé précédemment.</li>
+<li>Lorsque le formulaire est validé, vous devez envoyer une requête POST au serveur avec les informations de l&#39;utilisateur à l&#39;URL <code>basket/confirm</code>.</li>
+<li>La requête de confirmation ne peut être exécutée que si tous les champs ont été saisis. Dynamisez l&#39;ajout de la classe <code>has-error</code> en fonction de l&#39;état de validation du formulaire.<br>(Pour ce codelab, nous faisons ce traitement à la main, mais nous pourrions utiliser des bibliothèques comme <code>vue-validate</code>).</li>
+<li>Si la requête de confirmation s&#39;exécute avec succès, redirigez l&#39;utilisateur vers la page principale.</li>
+</ul>
 
-        
-    <script src="gitbook/gitbook.js"></script>
-    <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
 
-    </body>
+      </google-codelab-step>
+    
+      <google-codelab-step label="PW8 - VueX" duration="0">
+        <p>Pour terminer ce codelab, nous allons intégrer la bibliothèque <strong>Vuex</strong> afin de gérer les états de l&#39;application.</p>
+<ul>
+<li>Installez le module <code>vuex</code></li>
+<li>Créez le store qui sera utilisé dans l&#39;ensemble de l&#39;application. Dans le cadre de ce codelab nous n&#39;y manipulerons que le panier de l&#39;utilisateur.</li>
+<li>Le <code>store</code> devra être injecté dans chaque composant de notre application.</li>
+<li>Lorsque l&#39;utilisateur selectionne une bière, veuillez créer une mutation permettant d&#39;ajouter la bière selectionnée au panier.</li>
+<li>Dans les composants <code>basket</code> et <code>menu</code>, utilisez le panier stocké dans le <code>store</code> pour afficher les informations nécessaires.</li>
+<li>Dans le composant principal, si la propriété stockée dans le <code>store</code> n&#39;est pas définie, veuillez envoyer la requête vers le serveur, afin de l&#39;initialiser.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
 </html>
-

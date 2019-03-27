@@ -39,3 +39,4 @@ Dans le composant principal :
 * Récupérez le panier de l'utilisateur. Ce panier sera passé en paramètre du composant `menu` afin d'afficher les informations associées (nombre d'élément, montant du panier).
 
 * Ajoutez lorsque l'utilisateur sélectionne une bière, veuillez l'ajouter au panier.
+
