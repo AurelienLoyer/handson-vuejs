@@ -17,7 +17,8 @@ Cette API propose plusieurs points d'entrée :
 - `GET` sur `/basket`  retournera le panier de l'utilisateur
 - `POST` sur `/basket` pour ajouter une nouvelle bière au panier de l'utilisateur
 
-vue-resource -> axiox https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4
+Negative
+: ⚠️ vue-resource -> axiox https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4
 
 Pour consommer cette API nous allons utiliser `axios` :
 

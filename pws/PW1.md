@@ -1,7 +1,7 @@
 ## PW1 - Getting Started
 
-Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposition dans une application **VueJS**.
-Pour cela nous allons nous servir de l'utilitaire **vue-cli**.
+Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposition dans une application **vue.js**.
+Pour cela nous allons nous servir de l'utilitaire **vue cli**.
 
 * Installez **vue-cli**
 
