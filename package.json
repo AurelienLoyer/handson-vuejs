@@ -4,7 +4,7 @@
   "description": "http://slides.com/aurelienloyer/handson-vuejs#/ Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque Vue.js.",
   "main": "index.js",
   "scripts": {
-    "build": "./slides"
+    "build": "./slides.sh"
   },
   "repository": {
     "type": "git",
