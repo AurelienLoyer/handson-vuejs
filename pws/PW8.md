@@ -8,7 +8,7 @@ Pour terminer ce codelab, nous allons intégrer la bibliothèque **Vuex** afin d
 
 * Le `store` devra être injecté dans chaque composant de notre application.
 
-* Lorsque l'utilisateur selectionne une bière, veuillez créer une mutation permettant d'ajouter la bière selectionnée au panier.
+* Lorsque l'utilisateur sélectionne une bière, veuillez créer une mutation permettant d'ajouter la bière selectionnée au panier.
 
 * Dans les composants `basket` et `menu`, utilisez le panier stocké dans le `store` pour afficher les informations nécessaires.
 

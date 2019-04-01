@@ -9,7 +9,7 @@ Pour cela nous allons nous servir de l'utilitaire **vue cli**.
 npm install -g @vue/cli
 ```
 
-* Créez une application, utilisant le template **webpack** dans le dossier récupéré
+* Créez une application, en utilisant la commande suivante et en repondant aux questions générer votre base.
 
 ```shell
 vue create .

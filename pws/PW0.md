@@ -6,9 +6,7 @@ feedback link: https://twitter.com/AurelienLoyer
 
 # Codelab Vue.js
 
-## Getting started  
-
-### Prérequis
+## Prérequis 
 
 Pour faire ce codelab, vous avez besoin des outils suivants :
 
@@ -18,7 +16,7 @@ Pour faire ce codelab, vous avez besoin des outils suivants :
 
 Pour aider au développement, vous pouvez utiliser l'extention Chrome **Vue-devtools** (https://github.com/vuejs/vue-devtools)
 
-Afin d'éviter les problèmes de réseau le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :
+Afin d'éviter les problèmes de réseau et gagner du temps le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :
 
 ```shell
 git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
@@ -33,18 +31,11 @@ Pour vérifier que tout marche correctement:
 vue --version
 vue --help
 ```
-Vous devriez avoir une version > 3.* et une liste de command pour commencer votre projet.
+Vous devriez avoir une version > 3.* et une liste de commandes pour commencer votre projet.
 
-### Codelabs
+### Exercices
 
 Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.
-Le but sera d'intégrer ces pages dans une application VueJS.
-
-Pour récupérer ces templates, veuillez exécuter la commande suivante :
-
-```shell
-git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
-```
-
+Le but sera d'intégrer ces pages dans une application Vue.js.
 
 

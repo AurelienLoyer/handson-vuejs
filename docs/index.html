@@ -27,16 +27,15 @@
                   environment="web"
                   feedback-link="https://twitter.com/AurelienLoyer">
     
-      <google-codelab-step label="Getting started" duration="0">
-        <h2>Prérequis</h2>
-<p>Pour faire ce codelab, vous avez besoin des outils suivants :</p>
+      <google-codelab-step label="Prérequis" duration="0">
+        <p>Pour faire ce codelab, vous avez besoin des outils suivants :</p>
 <ul>
 <li>GIT</li>
 <li>NodeJS 7.x ou &gt;</li>
 <li>un IDE (WebStorm ou Visual Studio Code...)</li>
 </ul>
 <p>Pour aider au développement, vous pouvez utiliser l&#39;extention Chrome <strong>Vue-devtools</strong> (https://github.com/vuejs/vue-devtools)</p>
-<p>Afin d&#39;éviter les problèmes de réseau le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :</p>
+<p>Afin d&#39;éviter les problèmes de réseau et gagner du temps le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :</p>
 <pre><code>git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
 
 npm install -g @vue/cli
@@ -47,12 +46,9 @@ yarn global add @vue/cli
 <pre><code>vue --version
 vue --help
 </code></pre>
-<p>Vous devriez avoir une version &gt; 3.* et une liste de command pour commencer votre projet.</p>
-<h2>Codelabs</h2>
-<p>Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.<br>Le but sera d&#39;intégrer ces pages dans une application VueJS.</p>
-<p>Pour récupérer ces templates, veuillez exécuter la commande suivante :</p>
-<pre><code>git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
-</code></pre>
+<p>Vous devriez avoir une version &gt; 3.* et une liste de commandes pour commencer votre projet.</p>
+<h2>Exercices</h2>
+<p>Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.<br>Le but sera d&#39;intégrer ces pages dans une application Vue.js.</p>
 
 
       </google-codelab-step>
@@ -63,7 +59,7 @@ vue --help
 <li>Installez <strong>vue-cli</strong><pre><code>npm install -g @vue/cli
 </code></pre>
 </li>
-<li>Créez une application, utilisant le template <strong>webpack</strong> dans le dossier récupéré<pre><code>vue create .
+<li>Créez une application, en utilisant la commande suivante et en repondant aux questions générer votre base.<pre><code>vue create .
 </code></pre>
 </li>
 </ul>
@@ -137,7 +133,7 @@ background-color: rgba(255, 0, 0, 0.4)
 <ul>
 <li>Créez le filtre <code>uppercase</code> pour écrire en majuscules le nom des bières</li>
 <li>Créez le filtre <code>currency</code> pour ajouter le sigle <code>$</code> au prix de chaque bière.</li>
-<li>Nous allons terminer cette partie pratique par le développement d&#39;une <code>Computed Property</code>. Itérer la directive <code>v-for</code> avec cette <code>Computed Property</code> afin de trier les éléments par la propriété <code>price</code>.</li>
+<li>Nous allons terminer cette partie pratique par le développement d&#39;une <code>Computed Property</code>. Itérez la directive <code>v-for</code> avec cette <code>Computed Property</code> afin de trier les éléments par la propriété <code>price</code>.</li>
 </ul>
 
 
@@ -178,7 +174,7 @@ Vue.prototype.$http = axios;
       </google-codelab-step>
     
       <google-codelab-step label="PW6 - Le Routeur" duration="0">
-        <p>Nous allons à présent intégrer dans notre application le routeur proposé par la communauté <strong>VueJS</strong></p>
+        <p>Nous allons à présent intégrer dans notre application le routeur proposé par la communauté <strong>vue.jS</strong></p>
 <ul>
 <li>Installez le module <code>vue-router</code></li>
 <li>Créez deux composants : <code>home</code> et <code>basket</code><ul>
@@ -214,7 +210,7 @@ Vue.prototype.$http = axios;
 <li>Installez le module <code>vuex</code></li>
 <li>Créez le store qui sera utilisé dans l&#39;ensemble de l&#39;application. Dans le cadre de ce codelab nous n&#39;y manipulerons que le panier de l&#39;utilisateur.</li>
 <li>Le <code>store</code> devra être injecté dans chaque composant de notre application.</li>
-<li>Lorsque l&#39;utilisateur selectionne une bière, veuillez créer une mutation permettant d&#39;ajouter la bière selectionnée au panier.</li>
+<li>Lorsque l&#39;utilisateur sélectionne une bière, veuillez créer une mutation permettant d&#39;ajouter la bière selectionnée au panier.</li>
 <li>Dans les composants <code>basket</code> et <code>menu</code>, utilisez le panier stocké dans le <code>store</code> pour afficher les informations nécessaires.</li>
 <li>Dans le composant principal, si la propriété stockée dans le <code>store</code> n&#39;est pas définie, veuillez envoyer la requête vers le serveur, afin de l&#39;initialiser.</li>
 </ul>

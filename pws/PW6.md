@@ -1,6 +1,6 @@
 ## PW6 - Le Routeur
 
-Nous allons à présent intégrer dans notre application le routeur proposé par la communauté **VueJS**
+Nous allons à présent intégrer dans notre application le routeur proposé par la communauté **vue.jS**
 
 * Installez le module `vue-router`
 
