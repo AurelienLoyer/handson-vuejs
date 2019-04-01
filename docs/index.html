@@ -20,12 +20,42 @@
   </style>
 </head>
 <body>
-  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab-analytics gaid="UA-137363732-1"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="docs"
                   title="Codelab Vue.js"
                   environment="web"
-                  feedback-link="">
+                  feedback-link="https://twitter.com/AurelienLoyer">
+    
+      <google-codelab-step label="Getting started" duration="0">
+        <h2>Prérequis</h2>
+<p>Pour faire ce codelab, vous avez besoin des outils suivants :</p>
+<ul>
+<li>GIT</li>
+<li>NodeJS 7.x ou &gt;</li>
+<li>un IDE (WebStorm ou Visual Studio Code...)</li>
+</ul>
+<p>Pour aider au développement, vous pouvez utiliser l&#39;extention Chrome <strong>Vue-devtools</strong> (https://github.com/vuejs/vue-devtools)</p>
+<p>Afin d&#39;éviter les problèmes de réseau le jour J, veuillez cloner ce projet et exécuter les commandes suivantes :</p>
+<pre><code>git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
+
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+</code></pre>
+<p>Pour vérifier que tout marche correctement:</p>
+<pre><code>vue --version
+vue --help
+</code></pre>
+<p>Vous devriez avoir une version &gt; 3.* et une liste de command pour commencer votre projet.</p>
+<h2>Codelabs</h2>
+<p>Tous les exercices qui vont suivre se baseront sur deux pages statiques que nous avons développées.<br>Le but sera d&#39;intégrer ces pages dans une application VueJS.</p>
+<p>Pour récupérer ces templates, veuillez exécuter la commande suivante :</p>
+<pre><code>git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
+</code></pre>
+
+
+      </google-codelab-step>
     
       <google-codelab-step label="PW1 - Getting Started" duration="0">
         <p>Dans cette première partie pratique, nous allons juste intégrer le template que nous vous mettons à disposition dans une application <strong>vue.js</strong>.<br>Pour cela nous allons nous servir de l&#39;utilitaire <strong>vue cli</strong>.</p>
