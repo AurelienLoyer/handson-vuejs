@@ -2,7 +2,7 @@
 
 Pendant ce codelab, nous allons créer une petite application d'E-Commerce avec la bibliothèque Vue.js. 
 
-* http://slides.com/aurelienloyer/handson-vuejs
+* https://slides.com/aurelienloyer/handson-vuejs
 * https://slides.com/aurelienloyer/handson-vuejs/live
 
 ## Prérequis
@@ -45,4 +45,4 @@ git clone -b step0 https://github.com/T3kstiil3/handson-vuejs
 
 ## Exercices 
 
-http://aurelien-loyer.fr/handson-vuejs/
+https://aurelien-loyer.fr/handson-vuejs/
