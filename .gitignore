@@ -1,6 +1,2 @@
-/node_modules
-bower_components
-dist
-bespoke-theme-*
-
+node_modules
 pw.md
