@@ -3,7 +3,7 @@
 Negative
 : ⚠️ Plus de filtre dans Vue.js
 http://github.com/vuejs/vue/issues/2756#issuecomment-215503966
-https://vuejs.org/v2/guide/syntax.html#Filters
+https://vuejs.org/v2/guide/filters.html
 
 Nous allons à présent créer des filtres, afin de formater le contenu de notre application.
 
