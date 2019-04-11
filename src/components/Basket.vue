@@ -4,7 +4,7 @@
 
     <div class="container">
 
-      {{panier}}
+      {{ panier }}
 
     </div>
 
@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     getPanier: function () {
-      this.$http.get(this.apiurl + '/basket').then(response => {
-        this.panier = response.body
+      this.$http.get(this.apiurl + '/basket').then(resp => {
+        this.panier = resp.data
       })
     }
   }
