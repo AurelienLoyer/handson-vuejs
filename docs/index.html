@@ -64,11 +64,27 @@ vue --help
 </li>
 </ul>
 <p>Pour cette première étape, nous vous conseillons de désactiver <strong>eslint</strong> et le routeur lors de la génération de l&#39;application. (ne pas faire en production ⚠️ 😉)</p>
+<pre><code>? Please pick a preset: Manually select features
+? Check the features needed for your project:
+ ◉ Babel
+ ◯ TypeScript
+ ◯ Progressive Web App (PWA) Support
+ ◯ Router
+ ◯ Vuex
+❯◉ CSS Pre-processors
+ ◯ Linter / Formatter
+ ◯ Unit Testing
+ ◯ E2E Testing
+
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? In dedicated config files
+? Save this as a preset for future projects? (y/N)
+</code></pre>
 <ul>
 <li>Vous devez à présent installer les dépendances avec <strong>NPM</strong> ou <strong>Yarn</strong><pre><code>npm i 
 </code></pre>
 </li>
-<li>L&#39;application se lance avec la commande suivante :<pre><code>npm run dev
+<li>L&#39;application se lance avec la commande suivante :<pre><code>npm run serve
 </code></pre>
 </li>
 <li>Vue CLI 3 arrive avec une nouvelle interface UI, pour la tester :<pre><code>vue ui
@@ -152,7 +168,7 @@ npm start
 <li><code>GET</code> sur <code>/basket</code>  retournera le panier de l&#39;utilisateur</li>
 <li><code>POST</code> sur <code>/basket</code> pour ajouter une nouvelle bière au panier de l&#39;utilisateur</li>
 </ul>
-<aside class="warning"><p>⚠️ vue-resource -&gt; axiox https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4</p>
+<aside class="warning"><p>⚠️ vue-resource -&gt; axiox (<a href="https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4" target="_blank">https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4</a>)</p>
 </aside>
 <p>Pour consommer cette API nous allons utiliser <code>axios</code> :</p>
 <pre><code>npm install axios --save
@@ -227,8 +243,9 @@ Vue.prototype.$http = axios;
 </ul>
 <h2>Aller plus loin</h2>
 <ul>
-<li>...</li>
-<li>...</li>
+<li><a href="https://vuejs.org/v2/guide/" target="_blank">https://vuejs.org/v2/guide/</a></li>
+<li><a href="https://madewithvuejs.com/" target="_blank">https://madewithvuejs.com/</a></li>
+<li><a href="https://vuetifyjs.com/en" target="_blank">https://vuetifyjs.com/en</a></li>
 </ul>
 
 
