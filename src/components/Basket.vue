@@ -88,8 +88,8 @@ export default {
       console.log('getPanier')
       console.log(this.$store.state.panier)
       if (this.$store.state.panier.length === 0) {
-        this.$http.get(this.apiurl + '/basket').then(response => {
-          this.$store.commit('createPanier', response.body)
+        this.$http.get(this.apiurl + '/basket').then(resp => {
+          this.$store.commit('createPanier', resp.data)
         })
       }
     },
