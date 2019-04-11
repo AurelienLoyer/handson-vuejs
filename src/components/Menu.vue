@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'menu',
+  name: 'vmenu',
   props: ['bieres'],
   computed: {
     total: function () {
@@ -29,7 +29,7 @@ export default {
         total += parseFloat(biere.price)
       })
       return Math.round(total * 100) / 100
-    }
+    } 
   }
 }
 </script>
