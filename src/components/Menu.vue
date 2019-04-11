@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'menu',
+  name: 'vmenu',
   props: ['bieres'],
   computed: {
     total: function () {

@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    
     <v-menu :bieres="panier"></v-menu>
 
     <div class="container">
